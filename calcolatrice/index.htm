@@ -127,27 +127,31 @@ function Calc()
 	
 	var arr=[];
 	arr.push(day,month,year,Kver(day+month+year));
-	arr.push(Kver(arr[0]+arr[1]+arr[2]+arr[3]));
-	arr.push(Kver(arr[0]+arr[1]),Kver(arr[1]+arr[2]),Kver(arr[2]+arr[3]),Kver(arr[3]+arr[0]));
-	arr.push(Kver(arr[3]+arr[4]),Kver(arr[2]+arr[4]));
-	arr.push(Kver(arr[9]+arr[10]));
-	arr.push(Kver(arr[9]+arr[11]),Kver(arr[10]+arr[11]));
-	arr.push(Kver(arr[0]+arr[4]));
-	arr.push(Kver(arr[1]+arr[4]));
-	arr.push(Kver(arr[0]+arr[14]));
-	arr.push(Kver(arr[1]+arr[15]));
-	arr.push(Kver(arr[3]+arr[9]));
-	arr.push(Kver(arr[2]+arr[10]));
-	arr.push(Kver(arr[4]+arr[14]));
-	arr.push(Kver(arr[4]+arr[15]));
-	arr.push(Kver(arr[5]+Kver(arr[5]+arr[6]+arr[7]+arr[8])));
-	arr.push(Kver(arr[5]+arr[22]));
-	arr.push(Kver(arr[6]+Kver(arr[5]+arr[6]+arr[7]+arr[8])));
-	arr.push(Kver(arr[6]+arr[24]));
-	arr.push(Kver(arr[7]+Kver(arr[5]+arr[6]+arr[7]+arr[8])));
-	arr.push(Kver(arr[7]+arr[26]));
-	arr.push(Kver(arr[8]+Kver(arr[5]+arr[6]+arr[7]+arr[8])));
-	arr.push(Kver(arr[8]+arr[28]));
+	arr.push(Kver(arr[0]+arr[1]+arr[2]+arr[3])); //4
+	arr.push(Kver(arr[0]+arr[1]),Kver(arr[1]+arr[2]),Kver(arr[2]+arr[3]),Kver(arr[3]+arr[0]));// 
+	arr.push(Kver(arr[3]+arr[4]),Kver(arr[2]+arr[4]));//10
+	arr.push(Kver(arr[9]+arr[10]));//11
+	arr.push(Kver(arr[9]+arr[11]),Kver(arr[10]+arr[11]));//12
+	arr.push(Kver(arr[0]+arr[4]));//14
+	arr.push(Kver(arr[1]+arr[4]));//15
+	arr.push(Kver(arr[0]+arr[14]));//16
+	arr.push(Kver(arr[1]+arr[15]));//17
+	arr.push(Kver(arr[3]+arr[9]));//18
+	arr.push(Kver(arr[2]+arr[10]));//19
+	arr.push(Kver(arr[4]+arr[14]));//20
+	arr.push(Kver(arr[4]+arr[15]));//21
+	//arr.push(Kver(arr[5]+Kver(arr[5]+arr[6]+arr[7]+arr[8])));//22
+	arr.push(Kver(arr[5]+arr[4]));//22
+	arr.push(Kver(arr[5]+arr[22]));//23
+	//arr.push(Kver(arr[6]+Kver(arr[5]+arr[6]+arr[7]+arr[8])));//24
+	arr.push(Kver(arr[6]+arr[4]));//24
+	arr.push(Kver(arr[6]+arr[24]));//25
+	//arr.push(Kver(arr[7]+Kver(arr[5]+arr[6]+arr[7]+arr[8])));//26
+	arr.push(Kver(arr[7]+arr[4]));//26
+	arr.push(Kver(arr[7]+arr[26]));//27
+	//arr.push(Kver(arr[8]+Kver(arr[5]+arr[6]+arr[7]+arr[8])));//28
+	arr.push(Kver(arr[8]+arr[4]));//28
+	arr.push(Kver(arr[8]+arr[28]));//29
 	
 	const res = arr.concat(count_line(arr[0],arr[5]),count_line(arr[5],arr[1]),count_line(arr[1],arr[6]),count_line(arr[6],arr[2]),count_line(arr[2],arr[7]),count_line(arr[7],arr[3]),count_line(arr[3],arr[8]),count_line(arr[8],arr[0]));
 	
