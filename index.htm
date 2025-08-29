@@ -810,6 +810,37 @@ body
 {
 margin: 0px;
 }
+	/* --- FIX для видимості тексту та ліній --- */
+
+/* Білий текст → темний */
+.cls-28, .cls-30, .cls-36, .cls-39, .cls-43, .cls-51,
+.cls-54, .cls-55, .cls-56, .cls-57, .cls-58, .cls-59, .cls-60,
+.wite {
+  color: #222 !important;       /* темно-сірий текст */
+  fill: #222 !important;        /* для SVG-текстів */
+  text-shadow: none !important; /* прибираємо чорну обводку */
+  font-weight: 700 !important;
+}
+
+/* Лінії (раніше бежеві) → більш контрастні */
+.cls-5, .cls-7, .cls-17, .cls-18, .cls-24,
+.cls-21, .cls-3, .cls-4, .cls-53, .cls-52 {
+  stroke: #444 !important;      /* темно-сірий контур */
+  stroke-width: 2px !important; /* трохи товщі */
+}
+
+/* Основні контури */
+.cls-64 {
+  stroke: #222 !important;
+  stroke-width: 3px !important;
+}
+
+/* Додатковий фікс: всі SVG-тексти з білим fill */
+svg text[fill="white"],
+svg tspan[fill="white"] {
+  fill: #222 !important;
+}
+
 </style>
 	
 
@@ -1535,6 +1566,7 @@ setTimeout(function(){ (function (d, w, k, o, g) { var n=d.getElementsByTagName(
 }, 2000); </script></div></body></html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
