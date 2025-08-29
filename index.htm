@@ -34,7 +34,8 @@ sessionStorage.setItem("visited", "y");
 } 
 document.addEventListener('DOMContentLoaded', t_setvisRecs);
 }
-})();</script><style>
+})();</script>
+	 
 /* робимо всі тексти у матриці темними */
 .cls-28, .cls-30, .cls-36, .cls-39, .cls-43, .cls-51,
 .cls-54, .cls-55, .cls-56, .cls-57, .cls-58, .cls-59, .cls-60, .cls-67 {
@@ -446,403 +447,100 @@ const zona = [
 </script>
 <style>
 @import url('../css2'); 
-@import	url(https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap');
 
-.inte,.cls-28,.cls-30,.cls-67,.cls-34,.cls-35,.cls-36,.cls-39,.cls-43,.cls-51,.cls-66,.cls-54,.cls-55,.cls-56,.cls-57,.cls-58,.cls-59,.cls-60,.cls-33, .cls-43, .cls-28,.cls-42,.cls-48, .cls-44,.cls-61, .cls-52, #mission, #table3, #zonainfo, #table2, .hh2, .hh4, .hh3, input
-{
-font-family: 'Cormorant', sans-serif; 
+/* Шрифти */
+.inte,.cls-28,.cls-30,.cls-67,.cls-34,.cls-35,.cls-36,.cls-39,.cls-43,
+.cls-51,.cls-66,.cls-54,.cls-55,.cls-56,.cls-57,.cls-58,.cls-59,.cls-60,
+.cls-33,.cls-42,.cls-48,.cls-44,.cls-61,.cls-52,#mission,#table3,
+#zonainfo,#table2,.hh2,.hh4,.hh3,input {
+  font-family: 'Cormorant', sans-serif; 
 }
-.inte
-{
-color: #ffff;
-background: #0A393F;
-font-weight:bold;
-cursor: pointer;
-animation-duration: 3s;
-border: 1px grey;
-border-radius: 12px;
-}	
-.small
-{
-	border: 1px solid rgb(54, 54, 54);
-	font-size: 24;
-	width: 160px;
-	margin: 5px;
-	padding: 5px;	
+
+/* Кнопки */
+.inte {
+  color: #fff;
+  background: #0A393F;
+  font-weight: bold;
+  cursor: pointer;
+  animation-duration: 3s;
+  border: 1px grey;
+  border-radius: 12px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
-.big
-{
-	border: 2px black;
-	font-size: 28pt;
-	width: 200px;
-	margin: 10px;
-	padding: 5px;	
-	border-radius: 12px;
+.inte:hover {
+  color: grey;
+  background: #d2f8fc;
+  border: 1px #0A393F;
+  margin-left: 10px;
+  margin-right: 10px;
 }
-.inte:hover
-{
-	color: grey;
-	background: #d2f8fc;
-	border: 1px #0A393F;
-	margin-left: 10px;
-	margin-right: 10px;
+
+/* Розміри кнопок */
+.small {
+  border: 1px solid rgb(54, 54, 54);
+  font-size: 24px;
+  width: 160px;
+  margin: 5px;
+  padding: 5px; 
 }
-		
-.yete
-{
-	color:#0A393F;
+.big {
+  border: 2px solid black;
+  font-size: 28pt;
+  width: 200px;
+  margin: 10px;
+  padding: 5px; 
+  border-radius: 12px;
 }
-td.td_chakra{
-	text-align:left;
-	padding-left: 15px;
-	
-}
-.health-map-table
-{
-	//width: 680px;
-	background:#eadeb6!important;
-	text-align:center;
-}
-.health-map-table td
-{
-	//font-size:120%;
-	border-collapse:collapse;
-}
-.cls-1
-{
-	isolation:isolate
-}
-.cls-2
-{
-	opacity:.75
-}
-.cls-17,.cls-18,.cls-27,.cls-3,.cls-31,.cls-32,.cls-37,.cls-4,.cls-5,.cls-64,.cls-65,.cls-7
-{
-	fill:none}
-.cls-65
-{
-	stroke:#000
-}
-/*.cls-55 }fill:#FFF { */
-	/* Фікс для cls-55 */
-.cls-55 {
-  color: #222 !important; /* текст у HTML */
+
+/* Кола білі, текст чорний */
+circle.cls-55 {
+  fill: #fff !important;
 }
 text.cls-55, tspan.cls-55 {
-  fill: #222 !important; /* текст у SVG */
+  fill: #000 !important;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.25);
 }
 
-}
-.cls-5,.cls-7,.cls-17,.cls-18,.cls-24,.cls-21,.cls-3,.cls-4,.cls-488,.cls-53,.cls-52
-{
-	stroke:#eadeb6;
-}
-.cls-17,.cls-18,.cls-21,.cls-24,.cls-27,.cls-3,.cls-31,.cls-32,.cls-37,.cls-4,.cls-5,.cls-7
-{
-	stroke-miterlimit:10
-}
-.cls-21,.cls-24,.cls-3,.cls-5,.cls-7
-{
-	stroke-width:2px
-}
-.cls-6,.cls-8,.cls-63
-{
-	fill:#eadeb6
-}
-.cls-10
-{
-	fill:#5d3a8a
-}
-.cls-64
-{
-	stroke:#eadeb6;
-	stroke-width:3px
-}
-.cls-27
-{
-	stroke:#5d3a8a
-}
-.cls-13
-{
-	fill:#343e6f
-}
-.cls-15{
-	fill:#74a3ab;
-}
-.cls-17,.cls-18,.cls-27,.cls-31,.cls-32,.cls-37
-{
-	stroke-width:.5px
-}
-.cls-18
-{
-	stroke-dasharray: 8 4
-}
-.cls-19
-{
-	fill:#6a3432
-}
-.cls-31
-{
-	stroke:#6a3432
-}
-.cls-30,.cls-36,.cls-48,.cls-54,.cls-57,.cls-59
-{
-	fill:#fff;
-	text-shadow: black 0 0 5px;
-}
-.cls-1
-{
-	fill:black
-}
-.cls-22
-{
-	fill:#a34924
-}
-.cls-24,.cls-21,.cls-66,.cls-67
-{
-	fill:#000
-}
-.cls-25
-{
-	fill:#d8a475
-}
-.cls-28,.cls-33,.cls-39,.cls-44,.cls-48,.cls-51,.cls-66
-{
-	font-size:14px
-}
-.cls-44
-{
-	color: black;
-}
-.cls-28,.cls-30,.cls-67,.cls-34,.cls-35,.cls-36,.cls-39,.cls-43,.cls-51,.cls-66,.cls-54,.cls-55,.cls-56,.cls-57,.cls-58,.cls-59,.cls-60
-{
-
-	font-weight:700;
-	text-shadow: black 0 0 5px;
-	color: white;
+/* Лінії темні з легкою тінню */
+.cls-5,.cls-7,.cls-17,.cls-18,.cls-24,.cls-21,.cls-3,
+.cls-4,.cls-488,.cls-53,.cls-52 {
+  stroke: #333 !important;
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.3));
 }
 
-.cls-33, .cls-43, .cls-28
-{
-	color:grey;
+/* Загальний текст чорний з м’якою тінню */
+.cls-28,.cls-30,.cls-67,.cls-34,.cls-35,.cls-36,.cls-39,
+.cls-43,.cls-51,.cls-66,.cls-54,.cls-56,.cls-57,.cls-58,
+.cls-59,.cls-60 {
+  fill: #000 !important;   /* для SVG */
+  color: #000 !important;  /* для HTML */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2) !important;
 }
 
-.cls-29,.cls-35,.cls-41
-{
-	letter-spacing:-0.01em;
+/* Заголовки */
+.hh2 {
+  font-size: xxx-large;
+  text-align: center;
+  margin-top: 55px;
+  margin-bottom: 0;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.25);
 }
-.cls-30,.cls-67,.cls-43
-{
-	font-size:14px
-}
-.cls-32
-{
-	stroke:#fff
+.hh4 {
+  color: #444 !important;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-
-.cls-36
-{
-	font-size:8px
+/* Фон */
+body {
+  background-color: #fff;
+  margin: 0;
 }
-.cls-37
-{
-	stroke:#6a3432
-}
-.cls-38
-{
-	fill:#6a3432
-}
-.cls-44,.cls-61
-{
-	font-style:italic;
-}
-.cls-45
-{
-	letter-spacing:-0.01em
-}
-.cls-46{
-	letter-spacing:.01em
-}
-.cls-49{
-	letter-spacing:-0.04em
-}
-.cls-50{
-	letter-spacing:-0.03em
-}
-.cls-52{
-	font-size:41.04px;
-	fill:black;
-	}
-.cls-53
-{
-	fill:black
-}
-.cls-54,.cls-55,.cls-56{
-	font-size:40px;
-}
-.cls-56{
-	fill:#fff;
-}
-.cls-57,.cls-58
-{
-	font-size:18px;
-}
-.cls-59,.cls-60
-{
-	font-size:25px;
-}
-.cls-61
-{
-	font-size:10px;
-}
-.cls-64, .cls-28
-{
-	color: #eadeb6;
-}
-.cls-62
-{
-	letter-spacing:-0.07em
-}
-.matrix-value-point
-{
-	text-anchor:middle;
-	alignment-baseline:middle;
-	text-align: center;
-}
-#matrix-legend1
-{
-	position:absolute;
-	top:0;
-	right:400px;
-	padding-top:20px;
-	padding-right:20px;
-}
-#prednazn
-{
-	margin-bottom:20px;
-}
-#prednazn
-{
-	font-size:70%;
-}
-#prednazn h3
-{
-	font-size:130%;
-}
-.table td,.table th
-{
-	height:40px;
-	
-}
-#sky1,#terra1,#for_self1,#male1,#female1,#socium1,#spirit1,#planet1
-{
-	border:2px solid #eadeb6;
-	border-radius:50%;
-	width:34px;
-	height:34px;
-	display:inline-block;
-	text-align:center;
-	line-height:30px
-}
-body
-{	
-	background-color:#fff;
-}
-#row
-{
-	display:inline-block;
-	margin-left:0;
-	margin-bottom:50px;
-	margin-top:25px;
-	max-width:550px;
-	min-width:380px;
-	width:100%;
-}
-.row
-{
-	display:inline-block;
-	margin-left:0;
-	margin-bottom:20px;
-	margin-top:20px;
-	min-width:380px;
-	width:100%;
-}
-#table2
-{
-	width:100%;
-}
-#matrix
-{
-	float:left;
-	margin-left:1%;
-	margin-top:25px;
-	width:100%;
-	max-width:800px;
-	min-width:380px;
-}
-.hh2{
-	font-size:xxx-large;
-	text-align:center;
-	margin-top:55px;
-	margin-bottom:0;
-}
-.hh4
-{	
-	//font-size:x-large;
-	color:#0A393F;
-	text-align:center;
-	margin-top:0;
-	margin-bottom:10px;
-}
-.more
-{
-	margin-left: 10px;
-	margin-right: 10px;
-	width: 100%;
-	width: 544px;
-	min-width: 320px;
-	float: left;
-
-//	background: red;
-}
-.more2
-{
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 20px;
-	width: 408px;
-	min-width: 320px;
-	float: left;
-
-//	background: blue;
-}
-.wite
-{
-	color: white;
-}
-.sha
-{
-	 text-shadow: white 0 0 5px;
-}
-.sha2
-{
-	text-shadow: 1px 0 1px #000, 
-0 1px 1px #000, 
--1px 0 1px #000, 
-0 -1px 1px #000;
-}
-.pp
-{
-margin-block-start: 1em;
-margin-block-end: 1em;
-}
-body
-{
-margin: 0px;
-}
-	
 </style>
+
 	
 
 <div id="INTRO" style="display: block; background-image: url('hhttps://github.com/Met8ram/calcolatrice/blob/main/img/white.png?raw=true'); width: 100%; height: 100vh; position: absolute; top: 0; border: 1px solid rgba(0, 0, 0, 0); background-size: cover; background-position: center;">
@@ -1567,6 +1265,7 @@ setTimeout(function(){ (function (d, w, k, o, g) { var n=d.getElementsByTagName(
 }, 2000); </script></div></body></html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
