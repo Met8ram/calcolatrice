@@ -34,7 +34,32 @@ sessionStorage.setItem("visited", "y");
 } 
 document.addEventListener('DOMContentLoaded', t_setvisRecs);
 }
-})();</script></head><body class="t-body" style="margin:0;"><!--allrecords--><div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="4316670" data-tilda-page-id="42336019" data-tilda-page-alias="calcolo" data-tilda-formskey="4d3578dc6aa8f4a4a4cb6386036e7d04" data-tilda-lazy="yes"><div id="rec684477365" class="r t-rec" style=" " data-animationappear="off" data-record-type="131"><!-- T123 --><div class="t123"><div class="t-container_100 "><div class="t-width t-width_100 ">
+})();</script><style>
+/* робимо всі тексти у матриці темними */
+.cls-28, .cls-30, .cls-36, .cls-39, .cls-43, .cls-51,
+.cls-54, .cls-55, .cls-56, .cls-57, .cls-58, .cls-59, .cls-60, .cls-67 {
+  fill: #222 !important;   /* темно-сірий для SVG */
+  color: #222 !important;  /* темно-сірий для HTML */
+  text-shadow: none !important; /* прибираємо чорну "світлову" тінь */
+}
+
+/* якщо SVG має явно білий fill="white" */
+svg text[fill="white"], svg tspan[fill="white"] {
+  fill: #222 !important;
+}
+
+/* Лінії в матриці */
+.cls-5, .cls-7, .cls-17, .cls-18, .cls-21, .cls-24, .cls-31, .cls-32, .cls-37, .cls-53 {
+  stroke: #444 !important; /* темно-сірі лінії */
+  stroke-width: 2px !important;
+}
+
+/* Для додаткового контрасту */
+.line, line {
+  stroke: #444 !important;
+}
+</style>
+</head><body class="t-body" style="margin:0;"><!--allrecords--><div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="4316670" data-tilda-page-id="42336019" data-tilda-page-alias="calcolo" data-tilda-formskey="4d3578dc6aa8f4a4a4cb6386036e7d04" data-tilda-lazy="yes"><div id="rec684477365" class="r t-rec" style=" " data-animationappear="off" data-record-type="131"><!-- T123 --><div class="t123"><div class="t-container_100 "><div class="t-width t-width_100 ">
 
 			<script>
 function Print()
@@ -1536,6 +1561,7 @@ setTimeout(function(){ (function (d, w, k, o, g) { var n=d.getElementsByTagName(
 }, 2000); </script></div></body></html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
