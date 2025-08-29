@@ -5,6 +5,8 @@
   color: #222;              /* темний текст */
   background: #ffffff;      /* білий фон */
   -webkit-text-size-adjust: none;
+  background: #ffffff !important;
+  color: #222 !important;
 }
 
 /* Коментарі */
