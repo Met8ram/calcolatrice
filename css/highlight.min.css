@@ -2,7 +2,7 @@
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  color: #222;              /* темний текст */
+              /* темний текст */
   background: #ffffff;      /* білий фон */
   -webkit-text-size-adjust: none;
   background: #ffffff !important;
@@ -21,8 +21,11 @@
 .hljs-selector-tag,
 .hljs-title,
 .hljs-name {
-  color: #005cc5;           /* насичений синій */
+             /* насичений синій */
   font-weight: bold;
+  color: #005cc5 !important;
+  font-weight: bold !important;
+}
 }
 
 /* Числа та атрибути */
