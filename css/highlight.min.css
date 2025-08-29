@@ -2,54 +2,62 @@
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  color: #222; /* темніший текст */
-  background: #ffffff; /* чисто білий фон */
+  color: #222;              /* темний текст */
+  background: #ffffff;      /* білий фон */
   -webkit-text-size-adjust: none;
 }
 
+/* Коментарі */
 .hljs-comment,
 .diff .hljs-header {
-  color: #6a737d; /* сірий з кращим контрастом */
+  color: #6a737d;           /* контрастний сірий */
   font-style: italic;
 }
 
+/* Ключові слова */
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-title,
 .hljs-name {
-  color: #005cc5; /* насичений синій */
+  color: #005cc5;           /* насичений синій */
   font-weight: bold;
 }
 
+/* Числа та атрибути */
 .hljs-number,
 .hljs-literal,
 .hljs-attribute {
-  color: #e36209; /* теплий оранжевий */
+  color: #e36209;           /* оранжевий */
 }
 
+/* Рядки */
 .hljs-string,
 .hljs-doctag {
-  color: #032f62; /* темно-синій */
+  color: #032f62;           /* темно-синій */
 }
 
+/* Вбудовані елементи */
 .hljs-built_in,
 .hljs-builtin-name {
-  color: #d73a49; /* насичений червоний */
+  color: #d73a49;           /* червоний */
 }
 
+/* Регулярки, символи */
 .hljs-regexp,
 .hljs-symbol {
-  color: #22863a; /* темно-зелений */
+  color: #22863a;           /* зелений */
 }
 
+/* Типи та класи */
 .hljs-type,
 .hljs-class {
-  color: #6f42c1; /* фіолетовий */
+  color: #6f42c1;           /* фіолетовий */
   font-weight: bold;
 }
 
+/* Додавання та видалення */
 .hljs-addition {
-  background: #e6ffed; 
+  background: #e6ffed;
   color: #22863a;
 }
 
