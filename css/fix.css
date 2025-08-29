@@ -1,30 +1,21 @@
 /* --- FIX.CSS --- */
-/* Цей файл покращує видимість тексту та ліній, не змінюючи кольори чакр */
-
-/* --- ТЕКСТ --- */
+/* ТЕКСТ: робимо темним замість білого */
 .cls-28, .cls-30, .cls-36, .cls-39, .cls-43, .cls-51,
-.cls-54, .cls-55, .cls-56, .cls-57, .cls-58, .cls-59, .cls-60 {
-  color: #222 !important;            /* темний текст для кращої видимості */
-  text-shadow: none !important;      /* прибрано чорну розмиту тінь */
-  font-weight: 700;
-}
-
+.cls-54, .cls-55, .cls-56, .cls-57, .cls-58, .cls-59, .cls-60,
 .wite {
-  color: #222 !important;            /* заміна білого тексту */
+  color: #222 !important;
+  text-shadow: none !important;
+  font-weight: 700 !important;
 }
 
-/* --- ЛІНІЇ --- */
-.cls-5, .cls-7, .cls-17, .cls-18, .cls-21, .cls-24, .cls-53, .cls-52 {
-  stroke: #555 !important;           /* темніший сірий для тонких ліній */
-  stroke-width: 2px !important;      /* зроблені товщі */
+/* ЛІНІЇ: темніший контур */
+.cls-5, .cls-7, .cls-17, .cls-18, .cls-24, .cls-21, .cls-3, .cls-4, .cls-53, .cls-52 {
+  stroke: #444 !important;
+  stroke-width: 2px !important;
 }
 
+/* Основні контури */
 .cls-64 {
-  stroke: #333 !important;           /* головні контурні лінії */
+  stroke: #222 !important;
   stroke-width: 3px !important;
-}
-
-/* --- ЗАГАЛЬНЕ --- */
-body {
-  background-color: #fff !important; /* залишаємо світлу тему */
 }
