@@ -416,6 +416,31 @@ const zona = [
 "FILOSOFIA DI VITA:",
 "Non raccontare i propri piani a nessuno, sognare in grande, muoversi come ci si sente nella vita fidandosi dell'Universo. Non rendersi la vita difficile e complicata, evitare di cadere nel pessimismo. Essere sempre pronti a cominciare nuovi cicli di vita. Capire che ciò che non possono realizzare gli altri la 22ma energia può. La vita deve essere presa come un gioco, sapersi divertire. La persona deve fidarsi del proprio impulso interiore e non di ciò che dicono gli altri. Seguire il proprio istinto perchè è come se fosse una bussola. Per queste persone è importante andare nella vita laddove si sentono libere e sentono leggerezza, dove possono realizzarsi al meglio."]
 ];
+				/* --- FIX для видимості тексту та ліній --- */
+
+/* Білий текст → темний */
+.cls-28, .cls-30, .cls-36, .cls-39, .cls-43, .cls-51,
+.cls-54, .cls-55, .cls-56, .cls-57, .cls-58, .cls-59, .cls-60,
+.wite {
+  color: #222 !important;       /* темно-сірий текст */
+  fill: #222 !important;        /* для SVG-текстів */
+  text-shadow: none !important; /* прибираємо чорну обводку */
+  font-weight: 700 !important;
+}
+
+/* Лінії (раніше бежеві) → більш контрастні */
+.cls-5, .cls-7, .cls-17, .cls-18, .cls-24,
+.cls-21, .cls-3, .cls-4, .cls-53, .cls-52 {
+  stroke: #444 !important;      /* темно-сірий контур */
+  stroke-width: 2px !important; /* трохи товщі */
+}
+
+/* Основні контури */
+.cls-64 {
+  stroke: #222 !important;
+  stroke-width: 3px !important;
+}
+
 </script>
 <style>
 @import url('../css2'); 
@@ -1534,6 +1559,7 @@ setTimeout(function(){ (function (d, w, k, o, g) { var n=d.getElementsByTagName(
 }, 2000); </script></div></body></html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
