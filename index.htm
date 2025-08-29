@@ -522,10 +522,15 @@ td.td_chakra{
 {
 	stroke:#000
 }
-.cls-55
-{
-	
-	fill:#FFF
+/*.cls-55 }fill:#FFF { */
+	/* Фікс для cls-55 */
+.cls-55 {
+  color: #222 !important; /* текст у HTML */
+}
+text.cls-55, tspan.cls-55 {
+  fill: #222 !important; /* текст у SVG */
+}
+
 }
 .cls-5,.cls-7,.cls-17,.cls-18,.cls-24,.cls-21,.cls-3,.cls-4,.cls-488,.cls-53,.cls-52
 {
@@ -1561,6 +1566,7 @@ setTimeout(function(){ (function (d, w, k, o, g) { var n=d.getElementsByTagName(
 }, 2000); </script></div></body></html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
