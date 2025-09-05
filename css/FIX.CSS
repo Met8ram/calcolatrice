@@ -14,8 +14,8 @@
 }
 
 /* --- ЛІНІЇ --- */
-.cls-5, .cls-7, .cls-17, .cls-18, .cls-21, .cls-24, .cls-53, .cls-52 {
-  stroke: #555 !important;           /* темніший сірий для тонких ліній */
+.cls-5, .cls-7, .cls-17, .cls-18, .cls-21, .cls-24, .cls-53,  {
+  stroke: #555 !important;           /* темніший сірий для тонких ліній .cls-52*/
   stroke-width: 2px !important;      /* зроблені товщі */
 }
 
