@@ -4,7 +4,8 @@
 
 		 <link rel="stylesheet" href="fix.css">
 <meta charset="utf-8"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--metatextblock--><title>Calcolatrice - Tetiana Matry</title><meta name="description" content="CALCOLO DELLA MATRICE DEL DESTINO - OLESYA MORE"> <meta property="og:url" content="http://matricedeldestino.tilda.ws/calcolo"><meta property="og:title" content="CALCOLO DELLA MATRICE DEL DESTINO - Tetiana Matry"><meta property="og:description" content="CALCOLO DELLA MATRICE DEL DESTINO - Tetiana Matry"><meta property="og:type" content="website"><link rel="canonical" href="http://matricedeldestino.tilda.ws/calcolo"><!--/metatextblock--><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://ws.tildacdn.com"><link rel="dns-prefetch" href="https://static.tildacdn.com"><link rel="shortcut icon" href="../img/tildafavicon.ico" type="image/x-icon"><!-- Assets --><script src="../js/tilda-fallback-1.0.min.js" async="" charset="utf-8"></script><link rel="stylesheet" href="../css/tilda-grid-3.0.min.css" type="text/css" media="all" onerror="this.loaderr='y';"><link rel="stylesheet" href="/tilda-blocks-page42336019.min.css?t=1703428926" type="text/css" media="all" onerror="this.loaderr='y';"><link rel="stylesheet" href="../css/highlight.min.css" type="text/css" media="all" onerror="this.loaderr='y';"><link rel="stylesheet" href="../css/fonts-tildasans.css" type="text/css" media="all" onerror="this.loaderr='y';"><script nomodule="" src="../js/tilda-polyfill-1.0.min.js" charset="utf-8"></script><script type="text/javascript">function t_onReady(func) {
-if (document.readyState != 'loading') {
+
+	if (document.readyState != 'loading') {
 func();
 } else {
 document.addEventListener('DOMContentLoaded', func);
@@ -1608,13 +1609,171 @@ setTimeout(function(){ (function (d, w, k, o, g) { var n=d.getElementsByTagName(
   });
 </script>
 	
-	
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Перемикач мов */
+    .language-switcher {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: 5px;
+      z-index: 1000;
+    }
+
+    .language-switcher .lang-btn {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f0f0f0; /* під стиль кнопок калькулятора */
+      font-family: 'Tilda Sans', sans-serif;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .language-switcher .lang-btn:hover {
+      background-color: #e0e0e0;
+    }
+
+    /* При друку кнопки не видно */
+    @media print {
+      .language-switcher {
+        display: none;
+      }
+    }
+
+    /* Тексти перекладу */
+    .lang-text { display: none; }
+    .lang-text[data-lang="uk"] { display: block; }
+
+    /* Стиль калькулятора (приклад) */
+    .calculator {
+      margin: 100px auto 0 auto;
+      width: 260px;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .calculator input {
+      width: 100%;
+      height: 40px;
+      margin-bottom: 10px;
+      text-align: right;
+      font-size: 18px;
+      padding-right: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+    }
+
+    .buttons button {
+      padding: 15px 0;
+      font-size: 18px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #f0f0f0;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .buttons button:hover {
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Перемикач мов -->
+  <div class="language-switcher">
+    <button class="lang-btn" data-lang="uk">УКР</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="it">IT</button>
+  </div>
+
+  <!-- Заголовки для перекладу -->
+  <h1 class="lang-text" data-lang="uk">Калькулятор</h1>
+  <h1 class="lang-text" data-lang="en">Calculator</h1>
+  <h1 class="lang-text" data-lang="it">Calcolatrice</h1>
+
+  <!-- Калькулятор -->
+  <div class="calculator">
+    <input type="text" id="display" disabled>
+    <div class="buttons">
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button>/</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>*</button>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>-</button>
+      <button>0</button>
+      <button>.</button>
+      <button>=</button>
+      <button>+</button>
+    </div>
+  </div>
+
+  <!-- JS для перемикання мов та калькулятора -->
+  <script>
+    // Перемикання мов
+    document.addEventListener('DOMContentLoaded', () => {
+      const langButtons = document.querySelectorAll('.language-switcher .lang-btn');
+      const langTexts = document.querySelectorAll('.lang-text');
+
+      langButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const lang = btn.getAttribute('data-lang');
+          langTexts.forEach(text => {
+            text.style.display = text.getAttribute('data-lang') === lang ? 'block' : 'none';
+          });
+        });
+      });
+
+      // Логіка калькулятора
+      const display = document.getElementById('display');
+      const calcButtons = document.querySelectorAll('.buttons button');
+
+      calcButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          if(btn.textContent === '=') {
+            try {
+              display.value = eval(display.value);
+            } catch {
+              display.value = 'Error';
+            }
+          } else {
+            display.value += btn.textContent;
+          }
+        });
+      });
+    });
+  </script>	
 </body>
 
 </body>
  </html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
