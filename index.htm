@@ -1,8 +1,5 @@
 ﻿<html>
 	 <head>
-<h1 class="lang-text" data-lang="uk">Калькулятор</h1>
-<h1 class="lang-text" data-lang="en" style="display:none">Calculator</h1>
-<h1 class="lang-text" data-lang="it" style="display:none">Calcolatrice</h1>
 
 		 <link rel="stylesheet" href="fix.css">
 <meta charset="utf-8"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--metatextblock--><title>Calcolatrice - Tetiana Matry</title><meta name="description" content="CALCOLO DELLA MATRICE DEL DESTINO - OLESYA MORE"> <meta property="og:url" content="http://matricedeldestino.tilda.ws/calcolo"><meta property="og:title" content="CALCOLO DELLA MATRICE DEL DESTINO - Tetiana Matry"><meta property="og:description" content="CALCOLO DELLA MATRICE DEL DESTINO - Tetiana Matry"><meta property="og:type" content="website"><link rel="canonical" href="http://matricedeldestino.tilda.ws/calcolo"><!--/metatextblock--><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://ws.tildacdn.com"><link rel="dns-prefetch" href="https://static.tildacdn.com"><link rel="shortcut icon" href="../img/tildafavicon.ico" type="image/x-icon"><!-- Assets --><script src="../js/tilda-fallback-1.0.min.js" async="" charset="utf-8"></script><link rel="stylesheet" href="../css/tilda-grid-3.0.min.css" type="text/css" media="all" onerror="this.loaderr='y';"><link rel="stylesheet" href="/tilda-blocks-page42336019.min.css?t=1703428926" type="text/css" media="all" onerror="this.loaderr='y';"><link rel="stylesheet" href="../css/highlight.min.css" type="text/css" media="all" onerror="this.loaderr='y';"><link rel="stylesheet" href="../css/fonts-tildasans.css" type="text/css" media="all" onerror="this.loaderr='y';"><script nomodule="" src="../js/tilda-polyfill-1.0.min.js" charset="utf-8"></script><script type="text/javascript">function t_onReady(func) {
@@ -1572,9 +1569,28 @@ Unione del maschile e femminile.<br>Abilità, capacità, conoscenze.</td>
   </div>                
 </div> </div></div></div></div><!--/allrecords--><!-- Stat --><script type="text/javascript">if (! window.mainTracker) { window.mainTracker = 'tilda'; }
 setTimeout(function(){ (function (d, w, k, o, g) { var n=d.getElementsByTagName(o)[0],s=d.createElement(o),f=function(){n.parentNode.insertBefore(s,n);}; s.type = "text/javascript"; s.async = true; s.key = k; s.id = "tildastatscript"; s.src=g; if (w.opera=="[object Opera]") {d.addEventListener("DOMContentLoaded", f, false);} else { f(); } })(document, window, 'e68424c6abc9ee5981f29fc3394ac717','script','https://static.tildacdn.com/js/tilda-stat-1.0.min.js');
-}, 2000); </script></div></body></html>
+}, 2000); 
+</script>
+</div>
+	<!-- скрипт для перемикання мов -->
+<script>
+  const langButtons = document.querySelectorAll('.language-switcher button');
+  const langTexts = document.querySelectorAll('.lang-text');
+
+  langButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-lang');
+      langTexts.forEach(text => {
+        text.style.display = text.getAttribute('data-lang') === lang ? 'block' : 'none';
+      });
+    });
+  });
+</script>
+</body>
+ </html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
