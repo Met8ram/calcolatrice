@@ -8,8 +8,8 @@
   font-weight: 700 !important;
 }
 
-/* ЛІНІЇ: темніший контур */
-.cls-5, .cls-7, .cls-17, .cls-18, .cls-24, .cls-21, .cls-3, .cls-4, .cls-53, .cls-52 {
+/* ЛІНІЇ: темніший контур .cls-52 */
+.cls-5, .cls-7, .cls-17, .cls-18, .cls-24, .cls-21, .cls-3, .cls-4, .cls-53,  {
   stroke: #444 !important;
   stroke-width: 2px !important;
 }
@@ -19,3 +19,4 @@
   stroke: #222 !important;
   stroke-width: 3px !important;
 }
+
