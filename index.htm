@@ -1586,10 +1586,25 @@ setTimeout(function(){ (function (d, w, k, o, g) { var n=d.getElementsByTagName(
     });
   });
 </script>
+	<!-- скрипт для перемикання мов -->
+<script>
+  const langButtons = document.querySelectorAll('.language-switcher button');
+  const langTexts = document.querySelectorAll('.lang-text');
+
+  langButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-lang');
+      langTexts.forEach(text => {
+        text.style.display = text.getAttribute('data-lang') === lang ? 'block' : 'none';
+      });
+    });
+  });
+</script>
 </body>
  </html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
