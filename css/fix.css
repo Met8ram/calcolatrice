@@ -5,6 +5,13 @@ polygon {
 }
 
 
+/* Контур залишається темним */
+polygon {
+  stroke: #222; /* темний контур */
+  stroke-width: 2px;
+  fill: rgba(255, 255, 255, 0.1); /* світла прозора заливка */
+}
+
 
 
 
@@ -76,6 +83,7 @@ img, .t-container, .t-width {
 * {
   box-sizing: border-box;
 }
+
 
 
 
