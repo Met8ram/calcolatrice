@@ -1,58 +1,32 @@
 /* Прибираємо горизонтальний скрол */
 html, body {
   overflow-x: hidden !important;
-  width: 100%;
-  max-width: 100vw;
+  margin: 0;
+  padding: 0;
 }
 
-/* Контейнер від Tilda */
-.t-records {
-  max-width: 100vw;
-  overflow-x: hidden;
+/* Обмеження ширини контейнерів */
+.t-records,
+.t-body,
+.allrecords {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
 }
 
-/* SVG в матриці */
+/* Адаптивні SVG */
 svg {
   max-width: 100%;
   height: auto;
   display: block;
-  overflow: hidden;
 }
 
-/* Додатково: щоб картинки не вилазили */
-img {
+/* Адаптивні зображення/елементи */
+img, .t-container, .t-width {
   max-width: 100%;
-  height: auto;
-  display: block;
+  width: auto;
 }
 
-
-
-
-
-
-
-
-/* --- FIX.CSS --- */
-/* ТЕКСТ: робимо темним замість білого */
-.cls-28, .cls-30, .cls-36, .cls-39, .cls-43, .cls-51,
-.cls-54, .cls-55, .cls-56, .cls-57, .cls-58, .cls-59, .cls-60,
-.wite {
-  color: #222 !important;
-  text-shadow: none !important;
-  font-weight: 700 !important;
+/* Переконаємося, що анімації не розштовхують layout */
+* {
+  box-sizing: border-box;
 }
-
-/* ЛІНІЇ: темніший контур .cls-52 */
-.cls-5, .cls-7, .cls-17, .cls-18, .cls-24, .cls-21, .cls-3, .cls-4, .cls-53,  {
-  stroke: #444 !important;
-  stroke-width: 2px !important;
-}
-
-/* Основні контури */
-.cls-64 {
-  stroke: #222 !important;
-  stroke-width: 3px !important;
-}
-
-
