@@ -1,3 +1,52 @@
+/* Polygon світлий всередині, контур темний */
+polygon {
+  fill: rgba(255, 255, 255, 0.1) !important;
+  stroke: #222 !important;
+  stroke-width: 2px !important;
+}
+
+/* Текст всередині матриці */
+.cls-28, .cls-30, .cls-36, .cls-39, .cls-43, .cls-51,
+.cls-54, .cls-55, .cls-56, .cls-57, .cls-58, .cls-59, .cls-60, .cls-67 {
+  fill: #222 !important;
+  color: #222 !important;
+  text-shadow: none !important;
+}
+
+
+.instagram-link {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000; /* вище всіх елементів */
+}
+
+
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.05) 0%, transparent 70%),
+    radial-gradient(circle at 70% 70%, rgba(200,200,255,0.03) 0%, transparent 80%),
+    radial-gradient(circle at center, rgba(255,200,200,0.02) 0%, transparent 70%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+  z-index: 0; /* позаду всіх елементів */
+}
+
+
+
+
+
+
+
 /* Прибираємо горизонтальний скрол */
 html, body {
   overflow-x: hidden !important;
@@ -131,6 +180,7 @@ img, .t-container, .t-width {
 * {
   box-sizing: border-box;
 }
+
 
 
 
