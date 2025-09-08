@@ -11,24 +11,22 @@
 }
 
 .instagram-link a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #E1306C; /* Instagram рожево-фіолетовий */
-  border-radius: 50%;
-  width: 55px;
-  height: 55px;
+  display: inline-block;
+  background: #E1306C; /* Instagram стиль */
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 30px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: sans-serif;
+  font-size: 16px;
 }
 
 .instagram-link a:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 0 6px 10px rgba(0,0,0,0.3);
-}
-
-.instagram-link svg {
-  stroke: #fff;
 }
 
 
@@ -68,6 +66,7 @@ img, .t-container, .t-width {
 * {
   box-sizing: border-box;
 }
+
 
 
 
