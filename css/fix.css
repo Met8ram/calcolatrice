@@ -1,3 +1,19 @@
+/* Пріоритетно для polygon */
+polygon {
+  fill: rgba(255, 255, 255, 0.1) !important; /* світла прозора заливка */
+  stroke: #222 !important; /* темний контур */
+  stroke-width: 2px !important;
+}
+
+.cls-5, .cls-7 {
+  fill: rgba(255, 255, 255, 0.1) !important; /* світла заливка */
+  stroke: #222 !important; /* темний контур */
+  stroke-width: 2px !important;
+}
+
+
+
+
 /* --- Світлий фон з легкими ефектами --- */
 body {
   background: #f5f5f7; /* світлий тон */
@@ -104,6 +120,7 @@ img, .t-container, .t-width {
 * {
   box-sizing: border-box;
 }
+
 
 
 
