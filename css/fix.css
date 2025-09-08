@@ -1,4 +1,8 @@
 .instagram-link {
+  background: red !important;
+}
+
+.instagram-link {
   position: fixed;
   bottom: 20px;
   left: 50%;
@@ -64,5 +68,6 @@ img, .t-container, .t-width {
 * {
   box-sizing: border-box;
 }
+
 
 
