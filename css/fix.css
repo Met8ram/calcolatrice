@@ -1,3 +1,36 @@
+.instagram-link {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+.instagram-link a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E1306C; /* Instagram рожево-фіолетовий */
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instagram-link a:hover {
+  transform: translateX(-50%) scale(1.1);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+}
+
+.instagram-link svg {
+  stroke: #fff;
+}
+
+
+
+
+
 /* Прибираємо горизонтальний скрол */
 html, body {
   overflow-x: hidden !important;
@@ -30,3 +63,4 @@ img, .t-container, .t-width {
 * {
   box-sizing: border-box;
 }
+
