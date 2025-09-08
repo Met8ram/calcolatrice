@@ -1,29 +1,13 @@
-/* Polygon світлий всередині, контур темний */
-polygon {
-  fill: rgba(255, 255, 255, 0.1) !important;
-  stroke: #222 !important;
-  stroke-width: 2px !important;
+/* --- Світлий фон з легкими ефектами --- */
+body {
+  background: #f5f5f7; /* світлий тон */
+  color: #222; /* темний текст */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  position: relative;
+  overflow-x: hidden;
 }
 
-/* Текст всередині матриці */
-.cls-28, .cls-30, .cls-36, .cls-39, .cls-43, .cls-51,
-.cls-54, .cls-55, .cls-56, .cls-57, .cls-58, .cls-59, .cls-60, .cls-67 {
-  fill: #222 !important;
-  color: #222 !important;
-  text-shadow: none !important;
-}
-
-
-.instagram-link {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10000; /* вище всіх елементів */
-}
-
-
-
+/* Легкі містичні ефекти на фоні */
 body::before {
   content: '';
   position: fixed;
@@ -40,6 +24,79 @@ body::before {
   pointer-events: none;
   z-index: 0; /* позаду всіх елементів */
 }
+
+/* --- SVG Матриця --- */
+
+/* Polygon: світла заливка всередині + темний контур */
+polygon {
+  fill: rgba(255, 255, 255, 0.1) !important; /* легка прозора заливка */
+  stroke: #222 !important; /* темний контур */
+  stroke-width: 2px !important;
+}
+
+/* Лінії всередині матриці */
+.cls-5, .cls-7, .cls-17, .cls-18, .cls-21, .cls-24, .cls-31, .cls-32, .cls-37, .cls-53 {
+  stroke: #444 !important;
+  stroke-width: 2px !important;
+}
+
+/* Текст всередині матриці */
+.cls-28, .cls-30, .cls-36, .cls-39, .cls-43, .cls-51,
+.cls-54, .cls-55, .cls-56, .cls-57, .cls-58, .cls-59, .cls-60, .cls-67 {
+  fill: #222 !important;   /* текст темний */
+  color: #222 !important;
+  text-shadow: none !important;
+}
+
+/* Якщо SVG має явно білий fill="white" */
+svg text[fill="white"], svg tspan[fill="white"] {
+  fill: #222 !important;
+}
+
+/* --- Instagram link --- */
+.instagram-link {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000; /* поверх всіх елементів */
+}
+
+.instagram-link a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #fff; /* білий круг під іконку */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instagram-link a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+}
+
+.instagram-link .inst-icon {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+/* --- Адаптивність --- */
+.t-records, .t-container, .t-width {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+svg, img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 
 
 
@@ -180,6 +237,7 @@ img, .t-container, .t-width {
 * {
   box-sizing: border-box;
 }
+
 
 
 
