@@ -1,3 +1,36 @@
+body {
+  background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  color: #fff; /* для контрасту тексту */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@keyframes gradientAnimation {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Легкі містичні елементи (optional) */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.02) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+
 .instagram-link {
   background: red !important;
 }
@@ -68,32 +101,6 @@ img, .t-container, .t-width {
 }
 
 
-
-body {
-  background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
-  color: #fff; /* для контрасту тексту */
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-@keyframes gradientAnimation {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
-}
-
-/* Легкі містичні елементи (optional) */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.02) 0%, transparent 70%);
-  pointer-events: none;
-}
 
 
 
