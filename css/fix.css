@@ -1,3 +1,38 @@
+/* Прибираємо горизонтальний скрол */
+html, body {
+  overflow-x: hidden !important;
+  width: 100%;
+  max-width: 100vw;
+}
+
+/* Контейнер від Tilda */
+.t-records {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* SVG в матриці */
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  overflow: hidden;
+}
+
+/* Додатково: щоб картинки не вилазили */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+
+
+
+
+
 /* --- FIX.CSS --- */
 /* ТЕКСТ: робимо темним замість білого */
 .cls-28, .cls-30, .cls-36, .cls-39, .cls-43, .cls-51,
@@ -19,4 +54,5 @@
   stroke: #222 !important;
   stroke-width: 3px !important;
 }
+
 
