@@ -1648,11 +1648,39 @@ setTimeout(function(){ (function (d, w, k, o, g) { var n=d.getElementsByTagName(
     });
   });
 </script>
-		
+	
+	<!-- скрипт debug -->	 
+<script>
+if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+  addDebugButton();
+}
+
+function addDebugButton() {
+  const btn = document.createElement("button");
+  btn.innerText = "Debug";
+  btn.style.cssText = `
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: #222;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+  `;
+  btn.onclick = () => document.body.classList.toggle("debug");
+  document.body.appendChild(btn);
+}
+</script>
+	
 </body>
 </html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
