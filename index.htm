@@ -1651,7 +1651,7 @@ setTimeout(function(){ (function (d, w, k, o, g) { var n=d.getElementsByTagName(
 	
 	<!-- скрипт debug -->	 
 <script>
-if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+if (location.search.includes("debug=1")) {
   addDebugButton();
 }
 
@@ -1675,11 +1675,13 @@ function addDebugButton() {
   document.body.appendChild(btn);
 }
 </script>
+
 	
 </body>
 </html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
