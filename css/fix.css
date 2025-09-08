@@ -1,3 +1,8 @@
+
+
+
+
+
 body {
   background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
   background-size: 400% 400%;
@@ -32,10 +37,6 @@ body::before {
 
 
 .instagram-link {
-  background: red !important;
-}
-
-.instagram-link {
   position: fixed;
   bottom: 20px;
   left: 50%;
@@ -44,22 +45,30 @@ body::before {
 }
 
 .instagram-link a {
-  display: inline-block;
-  background: #E1306C; /* Instagram стиль */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E1306C; /* Instagram рожево-фіолетовий */
   color: #fff;
-  font-weight: bold;
   text-decoration: none;
-  padding: 12px 25px;
+  padding: 8px 15px;
   border-radius: 30px;
+  font-family: sans-serif;
+  font-weight: bold;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  font-family: sans-serif;
-  font-size: 16px;
 }
 
 .instagram-link a:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+}
+
+.instagram-link .inst-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  display: block;
 }
 
 
@@ -99,6 +108,7 @@ img, .t-container, .t-width {
 * {
   box-sizing: border-box;
 }
+
 
 
 
