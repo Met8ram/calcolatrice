@@ -1,41 +1,4 @@
-body {
-  background: #f5f5f7; /* світлий тон */
-  color: #222; /* контрастний темний текст */
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  position: relative;
-  overflow-x: hidden;
-}
 
-/* Легкі містичні ефекти */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.05) 0%, transparent 70%),
-    radial-gradient(circle at 70% 70%, rgba(200,200,255,0.03) 0%, transparent 80%),
-    radial-gradient(circle at center, rgba(255,200,200,0.02) 0%, transparent 70%);
-  background-repeat: no-repeat;
-  background-size: cover;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Адаптивність для контейнерів */
-.t-records, .t-container, .t-width {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-/* Адаптивні SVG та зображення */
-svg, img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
 
 
 
@@ -108,6 +71,7 @@ img, .t-container, .t-width {
 * {
   box-sizing: border-box;
 }
+
 
 
 
