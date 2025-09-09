@@ -1,68 +1,4 @@
-/* Polygon: легка світла заливка всередині + темний контур */
-polygon {
-  fill: rgba(255, 255, 255, 0.2) !important; /* 0.2 = легка прозорість, можна регулювати 0-1 */
-  stroke: #222 !important; /* темний контур */
-  stroke-width: 2px !important;
-}
 
-
-
-
-
-/* --- Світлий фон з легкими ефектами --- */
-body {
-  background: #f5f5f7; /* світлий тон */
-  color: #222; /* темний текст */
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  position: relative;
-  overflow-x: hidden;
-}
-
-/* Легкі містичні ефекти на фоні */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.05) 0%, transparent 70%),
-    radial-gradient(circle at 70% 70%, rgba(200,200,255,0.03) 0%, transparent 80%),
-    radial-gradient(circle at center, rgba(255,200,200,0.02) 0%, transparent 70%);
-  background-repeat: no-repeat;
-  background-size: cover;
-  pointer-events: none;
-  z-index: 0; /* позаду всіх елементів */
-}
-
-/* --- SVG Матриця --- */
-
-/* Polygon: світла заливка всередині + темний контур */
-polygon {
-  fill: rgba(255, 255, 255, 0.1) !important; /* легка прозора заливка */
-  stroke: #222 !important; /* темний контур */
-  stroke-width: 2px !important;
-}
-
-/* Лінії всередині матриці */
-.cls-5, .cls-7, .cls-17, .cls-18, .cls-21, .cls-24, .cls-31, .cls-32, .cls-37, .cls-53 {
-  stroke: #444 !important;
-  stroke-width: 2px !important;
-}
-
-/* Текст всередині матриці */
-.cls-28, .cls-30, .cls-36, .cls-39, .cls-43, .cls-51,
-.cls-54, .cls-55, .cls-56, .cls-57, .cls-58, .cls-59, .cls-60, .cls-67 {
-  fill: #222 !important;   /* текст темний */
-  color: #222 !important;
-  text-shadow: none !important;
-}
-
-/* Якщо SVG має явно білий fill="white" */
-svg text[fill="white"], svg tspan[fill="white"] {
-  fill: #222 !important;
-}
 
 /* --- Instagram link --- */
 .instagram-link {
@@ -248,6 +184,7 @@ img, .t-container, .t-width {
 * {
   box-sizing: border-box;
 }
+
 
 
 
