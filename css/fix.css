@@ -1,3 +1,12 @@
+.instagram-link {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000; /* обов’язково більше ніж у всіх блоків Tilda */
+}
+
+
 
 /* Polygon всередині матриці прозорий */
 .cls-5, .cls-7, .cls-17, .cls-18, .cls-21, .cls-24, .cls-31, .cls-32, .cls-37, .cls-53 {
@@ -41,6 +50,7 @@ img, .t-container, .t-width {
 * {
   box-sizing: border-box;
 }
+
 
 
 
