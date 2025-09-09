@@ -1,3 +1,9 @@
+/* Polygon повністю прозорий всередині + темний контур */
+polygon {
+  fill: transparent !important;  /* всередина прозора */
+  stroke: #222 !important;       /* контур темний */
+  stroke-width: 2px !important;
+}
 
 
 /* --- Instagram link --- */
@@ -184,6 +190,7 @@ img, .t-container, .t-width {
 * {
   box-sizing: border-box;
 }
+
 
 
 
