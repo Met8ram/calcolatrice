@@ -1,81 +1,9 @@
-.instagram-link {
+body::before {
+  content: '';
   position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10000; /* обов’язково більше ніж у всіх блоків Tilda */
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0; /* позаду всіх елементів */
 }
-
-
-
-/* Polygon всередині матриці прозорий */
-.cls-5, .cls-7, .cls-17, .cls-18, .cls-21, .cls-24, .cls-31, .cls-32, .cls-37, .cls-53 {
-  fill: transparent !important;  /* прозоро всередині */
-  stroke: #222 !important;       /* темний контур */
-  stroke-width: 2px !important;
-}
-
-
-
-
-/* Прибираємо горизонтальний скрол */
-html, body {
-  overflow-x: hidden !important;
-  margin: 0;
-  padding: 0;
-}
-
-/* Обмеження ширини контейнерів */
-.t-records,
-.t-body,
-.allrecords {
-  max-width: 100% !important;
-  overflow-x: hidden !important;
-}
-
-/* Адаптивні SVG */
-svg {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Адаптивні зображення/елементи */
-img, .t-container, .t-width {
-  max-width: 100%;
-  width: auto;
-}
-
-/* Переконаємося, що анімації не розштовхують layout */
-* {
-  box-sizing: border-box;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
