@@ -1,9 +1,18 @@
-/* Polygon повністю прозорий всередині + темний контур */
-polygon {
-  fill: transparent !important;  /* всередина прозора */
-  stroke: #222 !important;       /* контур темний */
+/* Для всіх polygon у матриці */
+.cls-5, .cls-7, .cls-17, .cls-18, .cls-21, .cls-24, .cls-31, .cls-32, .cls-37, .cls-53 {
+  fill: transparent !important;  /* прозорий фон */
+  stroke: #222 !important;       /* темний контур */
   stroke-width: 2px !important;
 }
+
+/* Текст всередині матриці залишається темним */
+.cls-28, .cls-30, .cls-36, .cls-39, .cls-43, .cls-51,
+.cls-54, .cls-55, .cls-56, .cls-57, .cls-58, .cls-59, .cls-60, .cls-67 {
+  fill: #222 !important;
+  color: #222 !important;
+  text-shadow: none !important;
+}
+
 
 
 /* --- Instagram link --- */
@@ -190,6 +199,7 @@ img, .t-container, .t-width {
 * {
   box-sizing: border-box;
 }
+
 
 
 
