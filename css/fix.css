@@ -1,4 +1,10 @@
 
+/* Polygon всередині матриці прозорий */
+.cls-5, .cls-7, .cls-17, .cls-18, .cls-21, .cls-24, .cls-31, .cls-32, .cls-37, .cls-53 {
+  fill: transparent !important;  /* прозоро всередині */
+  stroke: #222 !important;       /* темний контур */
+  stroke-width: 2px !important;
+}
 
 
 
@@ -35,6 +41,7 @@ img, .t-container, .t-width {
 * {
   box-sizing: border-box;
 }
+
 
 
 
