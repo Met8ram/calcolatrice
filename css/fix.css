@@ -1,7 +1,7 @@
 /* --- Світлий фон з легкими містичними ефектами --- */
 body {
   background: #f5f5f7;
-  color: #222;
+  /* ---color: #222;--- */
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   position: relative;
   overflow-x: hidden;
@@ -67,3 +67,4 @@ svg text[fill="white"], svg tspan[fill="white"] {
   width: 55px;
   height: 55px;
   border-radius: 50%;
+
