@@ -656,7 +656,9 @@ text.cls-55, tspan.cls-55 {
 }
 	.cls-21,.cls-55,.cls-58,.cls-60 /* Це не прибере перекриття, але може допомогти, якщо SVG інтерактивний */
 {
-	pointer-events: none; 
+	fill: white !important; /* саме fill, не color */
+  stroke: none !important; 
+	
 }
 .cls-33, .cls-43, .cls-28
 {
@@ -1656,6 +1658,7 @@ setTimeout(function(){ (function (d, w, k, o, g) { var n=d.getElementsByTagName(
  </html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
