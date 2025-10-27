@@ -1646,7 +1646,27 @@ setTimeout(function(){ (function (d, w, k, o, g) { var n=d.getElementsByTagName(
     });
   });
 </script>
-	
+
+		 <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Знайти всі SVG на сторінці
+  const svgs = document.querySelectorAll("svg");
+  
+  svgs.forEach(svg => {
+    // Знайти всі кола всередині SVG
+    const circles = svg.querySelectorAll("circle");
+    circles.forEach(circle => {
+      svg.appendChild(circle); // Перемістити коло в кінець SVG
+    });
+
+    // Також перенесемо всі <text> (щоб цифри не зникли за фігурами)
+    const texts = svg.querySelectorAll("text");
+    texts.forEach(text => {
+      svg.appendChild(text);
+    });
+  });
+});
+</script>
 	
 </body>
 
@@ -1660,6 +1680,7 @@ setTimeout(function(){ (function (d, w, k, o, g) { var n=d.getElementsByTagName(
  </html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
