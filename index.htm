@@ -1630,6 +1630,16 @@ setTimeout(function(){ (function (d, w, k, o, g) { var n=d.getElementsByTagName(
     });
   });
 </script>
+		 <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const svg = document.querySelector("svg");
+  if (svg) {
+    const circles = svg.querySelectorAll("circle");
+    circles.forEach(circle => svg.appendChild(circle)); // перемістити коло в кінець SVG
+  }
+});
+</script>
+
 	<!-- скрипт для перемикання мов -->
 <script>
   const langButtons = document.querySelectorAll('.language-switcher button');
@@ -1658,6 +1668,7 @@ setTimeout(function(){ (function (d, w, k, o, g) { var n=d.getElementsByTagName(
  </html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
