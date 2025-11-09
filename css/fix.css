@@ -40,7 +40,7 @@ body::before {
 /* Текст всередині матриці */
 .cls-28, .cls-30, .cls-36, .cls-39, .cls-43, .cls-51,
 .cls-54, .cls-55, .cls-56, .cls-57, .cls-58, .cls-59, .cls-60, .cls-67 {
-  fill: #222 !important;
+ /*  fill: #222 !important; */
   color: #222 !important;
   text-shadow: none !important;
 }
@@ -66,5 +66,6 @@ svg text[fill="white"], svg tspan[fill="white"] {
   width: 55px;
   height: 55px;
   border-radius: 50%;
+
 
 
