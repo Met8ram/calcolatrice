@@ -543,6 +543,26 @@ td.td_chakra{
 	//font-size:120%;
 	border-collapse:collapse;
 }
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.table-responsive table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-responsive th,
+.table-responsive td {
+  padding: 8px; /* Внутрішні відступи */
+  border: 1px solid #ddd;
+  word-break: break-word; /* Примусовий перенос слів */
+}
+
+.table-responsive th {
+  background-color: #f2f2f2;
+}	
 .cls-1
 {
 	isolation:isolate
@@ -1434,7 +1454,7 @@ margin-block-end: 1em;
 
 
 
-<div>
+<div class="table-responsive">
 
 <table class="table health-map-table" style=" color: white; margin-top: 50px"> 
 <caption class="hh4 yete2" style="font-size: 150%">Mappa della salute</caption>
@@ -1497,8 +1517,8 @@ margin-block-end: 1em;
 </tr>
 </tbody>
 </table>
-
 </div>
+	
 </div>
 <div class="row">
 
@@ -1692,6 +1712,7 @@ document.addEventListener("DOMContentLoaded", () => {
  </html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
