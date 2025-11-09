@@ -28,7 +28,7 @@ body::before {
 
 /* Polygon прозорий всередині, контур темний */
 .cls-5, .cls-7, .cls-17, .cls-18, .cls-21, .cls-24, .cls-31, .cls-32, .cls-37, .cls-53 {
-  /*fill: transparent !important;  /* прозорий фон всередині */
+  fill: transparent !important;  /* прозорий фон всередині */
   stroke: #222 !important;       /* темний контур */
   stroke-width: 2px !important;
 }
@@ -67,6 +67,7 @@ svg text[fill="white"], svg tspan[fill="white"] {
   width: 55px;
   height: 55px;
   border-radius: 50%;
+
 
 
 
