@@ -1,114 +1,4 @@
-
-<html>
-	 <head>
-		 <link rel="stylesheet" href="fix.css">
-		 <link rel="stylesheet" href="css/style.css">
-<meta charset="utf-8">
-		 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		 <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--metatextblock-->
-		 <title>Calcolatrice - Tetiana Matry</title>
-		 <meta name="description" content="CALCOLO DELLA MATRICE DEL DESTINO - Tetiana Matry"> 
-		 <meta property="og:url" content="http://matricedeldestino.tilda.ws/calcolo">
-		 <meta property="og:title" content="CALCOLO DELLA MATRICE DEL DESTINO - Tetiana Matry">
-		 <meta property="og:description" content="CALCOLO DELLA MATRICE DEL DESTINO - Tetiana Matry">
-		 <meta property="og:type" content="website"><link rel="canonical" href="http://matricedeldestino.tilda.ws/calcolo"><!--/metatextblock-->
-		 <meta name="format-detection" content="telephone=no">
-		 <meta http-equiv="x-dns-prefetch-control" content="on">
-		 <link rel="dns-prefetch" href="https://ws.tildacdn.com">
-		 <link rel="dns-prefetch" href="https://static.tildacdn.com">
-		 <link rel="shortcut icon" href="../img/tildafavicon.ico" type="image/x-icon"><!-- Assets -->
-		 <script src="../js/tilda-fallback-1.0.min.js" async="" charset="utf-8"></script>
-		 <link rel="stylesheet" href="../css/tilda-grid-3.0.min.css" type="text/css" media="all" onerror="this.loaderr='y';">
-		 <link rel="stylesheet" href="/tilda-blocks-page42336019.min.css?t=1703428926" type="text/css" media="all" onerror="this.loaderr='y';">
-		 <link rel="stylesheet" href="../css/highlight.min.css" type="text/css" media="all" onerror="this.loaderr='y';">
-		 <link rel="stylesheet" href="../css/fonts-tildasans.css" type="text/css" media="all" onerror="this.loaderr='y';">
-		 <script nomodule="" src="../js/tilda-polyfill-1.0.min.js" charset="utf-8"></script>
-		 <script type="text/javascript">
-			 
-			 function t_onReady(func) {
-if (document.readyState != 'loading') {
-func();
-} else {
-document.addEventListener('DOMContentLoaded', func);
-}
-}
-function t_onFuncLoad(funcName, okFunc, time) {
-if (typeof window[funcName] === 'function') {
-okFunc();
-} else {
-setTimeout(function() {
-t_onFuncLoad(funcName, okFunc, time);
-},(time || 100));
-}
-}</script>
-		 <script src="../js/jquery-1.10.2.min.js" charset="utf-8" onerror="this.loaderr='y';"></script> 
-		 <script src="../js/tilda-scripts-3.0.min.js" charset="utf-8" defer="" onerror="this.loaderr='y';"></script>
-		 <script src="/tilda-blocks-page42336019.min.js?t=1703428926" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
-		 <script src="../js/tilda-lazyload-1.0.min.js" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
-		 <script src="../js/highlight.min.js" charset="utf-8" onerror="this.loaderr='y';"></script>
-		 <script src="../js/tilda-events-1.0.min.js" charset="utf-8" async="" onerror="this.loaderr='y';"></script>
-		 <script type="text/javascript">window.dataLayer = window.dataLayer || [];</script>
-		 <script type="text/javascript">(function () {
-if((/bot|google|yandex|baidu|bing|msn|duckduckbot|teoma|slurp|crawler|spider|robot|crawling|facebook/i.test(navigator.userAgent))===false && typeof(sessionStorage)!='undefined' && sessionStorage.getItem('visited')!=='y' && document.visibilityState){
-var style=document.createElement('style');
-style.type='text/css';
-style.innerHTML='@media screen and (min-width: 980px) {.t-records {opacity: 0;}.t-records_animated {-webkit-transition: opacity ease-in-out .2s;-moz-transition: opacity ease-in-out .2s;-o-transition: opacity ease-in-out .2s;transition: opacity ease-in-out .2s;}.t-records.t-records_visible {opacity: 1;}}';
-document.getElementsByTagName('head')[0].appendChild(style);
-function t_setvisRecs(){
-var alr=document.querySelectorAll('.t-records');
-Array.prototype.forEach.call(alr, function(el) {
-el.classList.add("t-records_animated");
-});
-setTimeout(function () {
-Array.prototype.forEach.call(alr, function(el) {
-el.classList.add("t-records_visible");
-});
-sessionStorage.setItem("visited", "y");
-}, 400);
-} 
-document.addEventListener('DOMContentLoaded', t_setvisRecs);
-}
-})();</script>
-	 <style>
-/* робимо всі тексти у матриці темними */
-.cls-28, .cls-30, .cls-36, .cls-39, .cls-43, .cls-51,
-.cls-54, .cls-55, .cls-56, .cls-57, .cls-58, .cls-59, .cls-60, .cls-67 {
-    /* fill: #222 !important;  темно-сірий для SVG */
-  color: #222 !important;  /* темно-сірий для HTML */
-  text-shadow: none !important; /* прибираємо чорну "світлову" тінь */
-}
-
-/* якщо SVG має явно білий fill="white" */
-svg text[fill="white"], svg tspan[fill="white"] {
-  fill: #222 !important;
-}
-
-/* Лінії в матриці */
-.cls-5, .cls-7, .cls-17, .cls-18, .cls-21, .cls-24, .cls-31, .cls-32, .cls-37, .cls-53 {
-  stroke: #444 !important; /* темно-сірі лінії */
-  stroke-width: 2px !important;
-}
-
-/* Для додаткового контрасту */
-.line, line {
-  stroke: #444 !important;
-}
-/* Примусово перефарбовує всі .cls-3 прямокутники */
-.cls-3 {
-  stroke: #444 !important;
-  fill: none 
-}
-		 
-</style>
-	 <link rel="stylesheet" href="css/fix.css">
-</head>
-	 <body class="t-body" style="margin:0;"><!--allrecords-->
-		 <div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="4316670" data-tilda-page-id="42336019" data-tilda-page-alias="calcolo" data-tilda-formskey="4d3578dc6aa8f4a4a4cb6386036e7d04" data-tilda-lazy="yes">
-			 <div id="rec684477365" class="r t-rec" style=" " data-animationappear="off" data-record-type="131">
-			 <!-- T123 --><div class="t123"><div class="t-container_100 "><div class="t-width t-width_100 ">
-
-			<script>
-function Print()
+<html> <head> <link rel="stylesheet" href="fix.css"> <link rel="stylesheet" href="css/style.css"> <meta charset="utf-8"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--metatextblock--><title>Calcolatrice - Tetiana Matry</title><meta name="description" content="CALCOLO DELLA MATRICE DEL DESTINO - OLESYA MORE"> <meta property="og:url" content="http://matricedeldestino.tilda.ws/calcolo"><meta property="og:title" content="CALCOLO DELLA MATRICE DEL DESTINO - Tetiana Matry"><meta property="og:description" content="CALCOLO DELLA MATRICE DEL DESTINO - Tetiana Matry"><meta property="og:type" content="website"><link rel="canonical" href="http://matricedeldestino.tilda.ws/calcolo"><!--/metatextblock--><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://ws.tildacdn.com"><link rel="dns-prefetch" href="https://static.tildacdn.com"><link rel="shortcut icon" href="../img/tildafavicon.ico" type="image/x-icon"><!-- Assets --><script src="../js/tilda-fallback-1.0.min.js" async="" charset="utf-8"></script><link rel="stylesheet" href="../css/tilda-grid-3.0.min.css" type="text/css" media="all" onerror="this.loaderr='y';"><link rel="stylesheet" href="/tilda-blocks-page42336019.min.css?t=1703428926" type="text/css" media="all" onerror="this.loaderr='y';"><link rel="stylesheet" href="../css/highlight.min.css" type="text/css" media="all" onerror="this.loaderr='y';"><link rel="stylesheet" href="../css/fonts-tildasans.css" type="text/css" media="all" onerror="this.loaderr='y';"><script nomodule="" src="../js/tilda-polyfill-1.0.min.js" charset="utf-8"></script><script type="text/javascript">function t_onReady(func) { if (document.readyState != 'loading') { func(); } else { document.addEventListener('DOMContentLoaded', func); } } function t_onFuncLoad(funcName, okFunc, time) { if (typeof window[funcName] === 'function') { okFunc(); } else { setTimeout(function() { t_onFuncLoad(funcName, okFunc, time); },(time || 100)); } }</script><script src="../js/jquery-1.10.2.min.js" charset="utf-8" onerror="this.loaderr='y';"></script> <script src="../js/tilda-scripts-3.0.min.js" charset="utf-8" defer="" onerror="this.loaderr='y';"></script><script src="/tilda-blocks-page42336019.min.js?t=1703428926" charset="utf-8" async="" onerror="this.loaderr='y';"></script><script src="../js/tilda-lazyload-1.0.min.js" charset="utf-8" async="" onerror="this.loaderr='y';"></script><script src="../js/highlight.min.js" charset="utf-8" onerror="this.loaderr='y';"></script><script src="../js/tilda-events-1.0.min.js" charset="utf-8" async="" onerror="this.loaderr='y';"></script><script type="text/javascript">window.dataLayer = window.dataLayer || [];</script><script type="text/javascript">(function () { if((/bot|google|yandex|baidu|bing|msn|duckduckbot|teoma|slurp|crawler|spider|robot|crawling|facebook/i.test(navigator.userAgent))===false && typeof(sessionStorage)!='undefined' && sessionStorage.getItem('visited')!=='y' && document.visibilityState){ var style=document.createElement('style'); style.type='text/css'; style.innerHTML='@media screen and (min-width: 980px) {.t-records {opacity: 0;}.t-records_animated {-webkit-transition: opacity ease-in-out .2s;-moz-transition: opacity ease-in-out .2s;-o-transition: opacity ease-in-out .2s;transition: opacity ease-in-out .2s;}.t-records.t-records_visible {opacity: 1;}}'; document.getElementsByTagName('head')[0].appendChild(style); function t_setvisRecs(){ var alr=document.querySelectorAll('.t-records'); Array.prototype.forEach.call(alr, function(el) { el.classList.add("t-records_animated"); }); setTimeout(function () { Array.prototype.forEach.call(alr, function(el) { el.classList.add("t-records_visible"); }); sessionStorage.setItem("visited", "y"); }, 400); } document.addEventListener('DOMContentLoaded', t_setvisRecs); } })();</script> <style> /* робимо всі тексти у матриці темними */ .cls-28, .cls-30, .cls-36, .cls-39, .cls-43, .cls-51, .cls-54, .cls-55, .cls-56, .cls-57, .cls-58, .cls-59, .cls-60, .cls-67 { /* fill: #222 !important; темно-сірий для SVG */ color: #222 !important; /* темно-сірий для HTML */ text-shadow: none !important; /* прибираємо чорну "світлову" тінь */ } /* якщо SVG має явно білий fill="white" */ svg text[fill="white"], svg tspan[fill="white"] { fill: #222 !important; } /* Лінії в матриці */ .cls-5, .cls-7, .cls-17, .cls-18, .cls-21, .cls-24, .cls-31, .cls-32, .cls-37, .cls-53 { stroke: #444 !important; /* темно-сірі лінії */ stroke-width: 2px !important; } /* Для додаткового контрасту */ .line, line { stroke: #444 !important; } /* Примусово перефарбовує всі .cls-3 прямокутники */ .cls-3 { stroke: #444 !important; fill: none } </style> <link rel="stylesheet" href="css/fix.css"> </head> <body class="t-body" style="margin:0;"><!--allrecords--> <div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="4316670" data-tilda-page-id="42336019" data-tilda-page-alias="calcolo" data-tilda-formskey="4d3578dc6aa8f4a4a4cb6386036e7d04" data-tilda-lazy="yes"> <div id="rec684477365" class="r t-rec" style=" " data-animationappear="off" data-record-type="131"> <!-- T123 --><div class="t123"><div class="t-container_100 "><div class="t-width t-width_100 "> <script> function Print()
 {
 	window.print();
 }
@@ -1706,6 +1596,7 @@ document.addEventListener("DOMContentLoaded", () => {
  </html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
