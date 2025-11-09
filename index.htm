@@ -1,3 +1,1555 @@
+
+﻿<html>
+	 <head>
+		 <link rel="stylesheet" href="fix.css">
+		 <link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--metatextblock--><title>Calcolatrice - Tetiana Matry</title><meta name="description" content="CALCOLO DELLA MATRICE DEL DESTINO - OLESYA MORE"> <meta property="og:url" content="http://matricedeldestino.tilda.ws/calcolo"><meta property="og:title" content="CALCOLO DELLA MATRICE DEL DESTINO - Tetiana Matry"><meta property="og:description" content="CALCOLO DELLA MATRICE DEL DESTINO - Tetiana Matry"><meta property="og:type" content="website"><link rel="canonical" href="http://matricedeldestino.tilda.ws/calcolo"><!--/metatextblock--><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://ws.tildacdn.com"><link rel="dns-prefetch" href="https://static.tildacdn.com"><link rel="shortcut icon" href="../img/tildafavicon.ico" type="image/x-icon"><!-- Assets --><script src="../js/tilda-fallback-1.0.min.js" async="" charset="utf-8"></script><link rel="stylesheet" href="../css/tilda-grid-3.0.min.css" type="text/css" media="all" onerror="this.loaderr='y';"><link rel="stylesheet" href="/tilda-blocks-page42336019.min.css?t=1703428926" type="text/css" media="all" onerror="this.loaderr='y';"><link rel="stylesheet" href="../css/highlight.min.css" type="text/css" media="all" onerror="this.loaderr='y';"><link rel="stylesheet" href="../css/fonts-tildasans.css" type="text/css" media="all" onerror="this.loaderr='y';"><script nomodule="" src="../js/tilda-polyfill-1.0.min.js" charset="utf-8"></script><script type="text/javascript">function t_onReady(func) {
+if (document.readyState != 'loading') {
+func();
+} else {
+document.addEventListener('DOMContentLoaded', func);
+}
+}
+function t_onFuncLoad(funcName, okFunc, time) {
+if (typeof window[funcName] === 'function') {
+okFunc();
+} else {
+setTimeout(function() {
+t_onFuncLoad(funcName, okFunc, time);
+},(time || 100));
+}
+}</script><script src="../js/jquery-1.10.2.min.js" charset="utf-8" onerror="this.loaderr='y';"></script> <script src="../js/tilda-scripts-3.0.min.js" charset="utf-8" defer="" onerror="this.loaderr='y';"></script><script src="/tilda-blocks-page42336019.min.js?t=1703428926" charset="utf-8" async="" onerror="this.loaderr='y';"></script><script src="../js/tilda-lazyload-1.0.min.js" charset="utf-8" async="" onerror="this.loaderr='y';"></script><script src="../js/highlight.min.js" charset="utf-8" onerror="this.loaderr='y';"></script><script src="../js/tilda-events-1.0.min.js" charset="utf-8" async="" onerror="this.loaderr='y';"></script><script type="text/javascript">window.dataLayer = window.dataLayer || [];</script><script type="text/javascript">(function () {
+if((/bot|google|yandex|baidu|bing|msn|duckduckbot|teoma|slurp|crawler|spider|robot|crawling|facebook/i.test(navigator.userAgent))===false && typeof(sessionStorage)!='undefined' && sessionStorage.getItem('visited')!=='y' && document.visibilityState){
+var style=document.createElement('style');
+style.type='text/css';
+style.innerHTML='@media screen and (min-width: 980px) {.t-records {opacity: 0;}.t-records_animated {-webkit-transition: opacity ease-in-out .2s;-moz-transition: opacity ease-in-out .2s;-o-transition: opacity ease-in-out .2s;transition: opacity ease-in-out .2s;}.t-records.t-records_visible {opacity: 1;}}';
+document.getElementsByTagName('head')[0].appendChild(style);
+function t_setvisRecs(){
+var alr=document.querySelectorAll('.t-records');
+Array.prototype.forEach.call(alr, function(el) {
+el.classList.add("t-records_animated");
+});
+setTimeout(function () {
+Array.prototype.forEach.call(alr, function(el) {
+el.classList.add("t-records_visible");
+});
+sessionStorage.setItem("visited", "y");
+}, 400);
+} 
+document.addEventListener('DOMContentLoaded', t_setvisRecs);
+}
+})();</script>
+	 <style>
+/* робимо всі тексти у матриці темними */
+.cls-28, .cls-30, .cls-36, .cls-39, .cls-43, .cls-51,
+.cls-54, .cls-55, .cls-56, .cls-57, .cls-58, .cls-59, .cls-60, .cls-67 {
+    /* fill: #222 !important;  темно-сірий для SVG */
+  color: #222 !important;  /* темно-сірий для HTML */
+  text-shadow: none !important; /* прибираємо чорну "світлову" тінь */
+}
+
+/* якщо SVG має явно білий fill="white" */
+svg text[fill="white"], svg tspan[fill="white"] {
+  fill: #222 !important;
+}
+
+/* Лінії в матриці */
+.cls-5, .cls-7, .cls-17, .cls-18, .cls-21, .cls-24, .cls-31, .cls-32, .cls-37, .cls-53 {
+  stroke: #444 !important; /* темно-сірі лінії */
+  stroke-width: 2px !important;
+}
+
+/* Для додаткового контрасту */
+.line, line {
+  stroke: #444 !important;
+}
+/* Примусово перефарбовує всі .cls-3 прямокутники */
+.cls-3 {
+  stroke: #444 !important;
+  fill: none 
+}
+		 
+</style>
+	 <link rel="stylesheet" href="css/fix.css">
+</head>
+	 <body class="t-body" style="margin:0;"><!--allrecords-->
+		 <div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="4316670" data-tilda-page-id="42336019" data-tilda-page-alias="calcolo" data-tilda-formskey="4d3578dc6aa8f4a4a4cb6386036e7d04" data-tilda-lazy="yes">
+			 <div id="rec684477365" class="r t-rec" style=" " data-animationappear="off" data-record-type="131">
+			 <!-- T123 --><div class="t123"><div class="t-container_100 "><div class="t-width t-width_100 ">
+
+			<script>
+function Print()
+{
+	window.print();
+}
+function Kver(x)
+{
+	if(x > 22)
+	{
+		var y = x.toString();
+		var z = y.split("");
+		var r = 0;
+		for (i = 0; i < z.length; i++)
+		{
+			r += Number(z[i]);
+		}
+		return Kver(r);
+	}
+	else
+	{
+		return x;
+	}
+}
+function count_line(n1,n2)
+{
+	var line = new Array(7).fill(0);
+	line[3] = Kver(n1+n2);
+	line[1] = Kver(n1+line[3]);
+	line[5] = Kver(n2+line[3]);
+	line[0] = Kver(n1+line[1]);
+	line[2] = Kver(line[1]+line[3]);
+	line[4] = Kver(line[3]+line[5]);
+	line[6] = Kver(n2+line[5]);
+	return line;
+}
+
+function GetValue(x)
+{
+	return document.getElementById(x).value;
+}
+function GetHTML(x)
+{
+	return document.getElementById(x).innerHTML;
+}
+function SetValue(x,y)
+{
+	document.getElementById(x).value = y;
+}
+function Calc()
+{
+	var all_array=[];
+	for (j = 1; j <= 86; j++)
+	{
+		var n;
+		if (j < 10)
+		{
+			n = "0"+j;
+		}
+		else
+		{
+			n = j;
+		}
+		all_array.push("point-"+n);
+	}
+	var tt = GetValue("birthday");
+	if (tt == "")
+	{
+		//Введите дату - Inserire i dati
+		SetHTML("elabel", "Inserire i dati");
+		document.getElementById("elabel").style.visibility = "visible";
+		return;
+	}
+	var date = new Date(We2JS((GetValue("birthday"))));
+	if (isNaN(date))
+	{
+		SetHTML("elabel", "Inserire i dati corretti");
+		document.getElementById("elabel").style.visibility = "visible";
+		return;
+	}
+	SetHTML("elabel", "!!!");
+	document.getElementById("elabel").style.visibility = "hidden";
+	var d = date.getDate();
+	var y = date.getFullYear();
+	var m = date.getMonth()+1;
+	var age = GetAge(date);
+		
+	var day = Kver(d);
+	var month = Kver(m);
+	var year = Kver(y);
+	
+	var arr=[];
+	arr.push(day,month,year,Kver(day+month+year));
+	arr.push(Kver(arr[0]+arr[1]+arr[2]+arr[3])); //4
+	arr.push(Kver(arr[0]+arr[1]),Kver(arr[1]+arr[2]),Kver(arr[2]+arr[3]),Kver(arr[3]+arr[0]));// 
+	arr.push(Kver(arr[3]+arr[4]),Kver(arr[2]+arr[4]));//10
+	arr.push(Kver(arr[9]+arr[10]));//11
+	arr.push(Kver(arr[9]+arr[11]),Kver(arr[10]+arr[11]));//12
+	arr.push(Kver(arr[0]+arr[4]));//14
+	arr.push(Kver(arr[1]+arr[4]));//15
+	arr.push(Kver(arr[0]+arr[14]));//16
+	arr.push(Kver(arr[1]+arr[15]));//17
+	arr.push(Kver(arr[3]+arr[9]));//18
+	arr.push(Kver(arr[2]+arr[10]));//19
+	arr.push(Kver(arr[4]+arr[14]));//20
+	arr.push(Kver(arr[4]+arr[15]));//21
+	//arr.push(Kver(arr[5]+Kver(arr[5]+arr[6]+arr[7]+arr[8])));//22
+	arr.push(Kver(arr[5]+arr[4]));//22
+	arr.push(Kver(arr[5]+arr[22]));//23
+	//arr.push(Kver(arr[6]+Kver(arr[5]+arr[6]+arr[7]+arr[8])));//24
+	arr.push(Kver(arr[6]+arr[4]));//24
+	arr.push(Kver(arr[6]+arr[24]));//25
+	//arr.push(Kver(arr[7]+Kver(arr[5]+arr[6]+arr[7]+arr[8])));//26
+	arr.push(Kver(arr[7]+arr[4]));//26
+	arr.push(Kver(arr[7]+arr[26]));//27
+	//arr.push(Kver(arr[8]+Kver(arr[5]+arr[6]+arr[7]+arr[8])));//28
+	arr.push(Kver(arr[8]+arr[4]));//28
+	arr.push(Kver(arr[8]+arr[28]));//29
+	
+	const res = arr.concat(count_line(arr[0],arr[5]),count_line(arr[5],arr[1]),count_line(arr[1],arr[6]),count_line(arr[6],arr[2]),count_line(arr[2],arr[7]),count_line(arr[7],arr[3]),count_line(arr[3],arr[8]),count_line(arr[8],arr[0]));
+	
+	SetHTML('purp-1', arr[0]);
+	SetHTML('purp-2', arr[1]);
+	SetHTML('purp-3', Kver(arr[0]+arr[1]));
+	SetHTML('blue-1', arr[16]);
+	SetHTML('blue-2', arr[17]);
+	SetHTML('blue-3', Kver(arr[16]+arr[17]));
+	SetHTML('cyan-1', arr[14]);
+	SetHTML('cyan-2', arr[15]);
+	SetHTML('cyan-3', Kver(arr[14]+arr[15]));
+	SetHTML('green-1', arr[20]);
+	SetHTML('green-2', arr[21]);
+	SetHTML('green-3', Kver(arr[20]+arr[21]));
+	SetHTML('yellow-1', arr[4]);
+	SetHTML('yellow-2', arr[4]);
+	SetHTML('yellow-3', Kver(arr[4]+arr[4]));
+	SetHTML('orange-1', arr[10]);
+	SetHTML('orange-2', arr[9]);
+	SetHTML('orange-3', Kver(arr[10]+arr[9]));
+	SetHTML('red-1', arr[2]);
+	SetHTML('red-2', arr[3]);
+	SetHTML('red-3', Kver(arr[2]+arr[3]));
+	SetHTML('total-1', Kver(arr[0]+arr[16]+arr[14]+arr[20]+arr[4]+arr[10]+arr[2]));
+	SetHTML('total-2', Kver(arr[1]+arr[17]+arr[15]+arr[21]+arr[4]+arr[9]+arr[3]));
+	SetHTML('total-3', Kver(Kver(arr[0]+arr[1])+Kver(arr[16]+arr[17])+Kver(arr[14]+arr[15])+Kver(arr[20]+arr[21])+Kver(arr[4]+arr[4])+Kver(arr[10]+arr[9])+Kver(arr[2]+arr[3])));
+	SetHTML('sky1', Kver(arr[1]+arr[3]));
+	SetHTML('terra1', Kver(arr[0]+arr[2]));
+	SetHTML('for_self1', Kver(Kver(arr[1]+arr[3])+Kver(arr[0]+arr[2])));
+	SetHTML('male1', Kver(arr[5]+arr[7]));
+	SetHTML('female1', Kver(arr[6]+arr[8]));
+	SetHTML('socium1', Kver(Kver(arr[5]+arr[7])+Kver(arr[6]+arr[8])));
+	SetHTML('spirit1', Kver(Kver(Kver(arr[1]+arr[3])+Kver(arr[0]+arr[2]))+Kver(Kver(arr[5]+arr[7])+Kver(arr[6]+arr[8]))));
+	SetHTML('planet1', Kver(Kver(Kver(arr[5]+arr[7])+Kver(arr[6]+arr[8]))+Kver(Kver(Kver(arr[1]+arr[3])+Kver(arr[0]+arr[2]))+Kver(Kver(arr[5]+arr[7])+Kver(arr[6]+arr[8])))));
+
+	SetHTML('date', d+'/'+m+'/'+y);
+	SetHTML('age', age);
+	SetHTML('weekday', GetDate(date.getDay()));
+
+	SetHTML('m3', arr[5]+', '+arr[7]+', '+Kver(arr[5]+arr[7]));
+	SetHTML('w3', arr[6]+', '+arr[8]+', '+Kver(arr[6]+arr[8]));
+	SetHTML('power_root', Kver(arr[5]+arr[6]+arr[7]+arr[8]));
+	SetHTML('power_inner', Kver(arr[4])+', '+Kver(arr[5]+arr[6]+arr[7]+arr[8])+', '+Kver(Kver(arr[4])+Kver(arr[5]+arr[6]+arr[7]+arr[8])));
+	
+	for (var j = 0; j < all_array.length; j++)
+	{
+		SetHTML(all_array[j], res[j]);
+	}
+	var central = res[4];
+	//SetHTML("zonainfo", "Описание для " + central + " энергии. " + zona[central-1]);
+	SetHTML("zona1", zona[central-1][0]);
+	SetHTML("zona2", zona[central-1][1]);
+	SetHTML("zona3", zona[central-1][2]);
+	SetHTML("zona4", zona[central-1][3]);
+	
+	Slide(false);
+	return true;
+}
+function GetDate(x)
+{
+	switch(x)
+	{
+		case 0: return "Domenica";
+		case 1: return "Lunedì";
+		case 2: return "Martedì";
+		case 3: return "Mercoledì";
+		case 4: return "Giovedì";
+		case 5: return "Venerdì";
+		case 6: return "Sabato";
+	}
+}
+function GetAge(x)
+{
+	var y = new Date();
+	var a = y.getFullYear() - x.getFullYear();
+	
+	if (a == 0)
+		return a;
+		
+	if (x.getMonth() > y.getMonth())
+	{
+		a -=1;
+	}
+	else if ((x.getMonth() == y.getMonth()) & (x.getDate() > y.getDate()))
+	{
+		a -=1;
+	}
+	
+	return a;
+}
+function Slide(x)
+{
+	if (x)
+	{
+		document.getElementById("INTRO").style.display="block";
+		document.getElementById("SCREEN").style.display="none";
+	}
+	else
+	{
+		document.getElementById("INTRO").style.display="none";
+		document.getElementById("SCREEN").style.display="block";
+	}
+}
+function SetHTML(x, y)
+{
+	//console.log (x + " " + y)
+	document.getElementById(x).innerHTML = y;
+}
+function KD(key, id)
+{
+	if (key == 'Backspace')
+	{
+		var d = GetValue(id);
+		if (d.length == 3 || d.length == 6)
+		{
+			var e = d.slice(0, d.length -1);
+			SetValue(id, e);
+		}
+	}
+  return (key >= '0' && key <= '9') ||
+    ['ArrowLeft','ArrowRight','Delete','Backspace', 'Tab', 'Enter'].includes(key);
+
+}
+function Dots(id)
+{
+	var d = GetValue(id);
+	
+	if (d.length == 2)
+	{
+		SetValue(id, d+".");
+	}
+	else if (d.length == 5)
+	{
+		SetValue(id, d+".");
+	}
+}
+function JS2We(x)
+{
+	var y8 = x.substr(0, 4);
+	var m8 = x.substr(5, 2);
+	var d8 = x.substr(8, 2);
+	return d8 + "." + m8 + "." + y8;
+}
+function We2JS(x)
+{
+	var d8 = x.substr(0, 2);
+	var m8 = x.substr(3, 2);
+	var y8 = x.substr(6, 4);
+	return y8 + "-" + m8 + "-" + d8;
+}
+const zona = [
+/*1 энергия*/
+["",
+"",
+"",
+""],
+/*2 энергия*/
+["",
+"",
+"",
+""],
+/*3 энергия*/
+["ENERGIA 3 - IMPERATRICE",
+"Energia della bellezza, arte, famiglia, queste persone sanno far fiorire tutto ciò che toccano. Il loro compito è portare bellezza ed abbondanza nel mondo, imparare a fare soldi e creare una famiglia. Vengono a formare il piano materiale sulla Terra ed aiutare gli altri a svilupparsi. Essere attraenti è un dono naturale. Energia che ha un karma monetario incredibile.",
+"FILOSOFIA DI VITA:",
+"Vivere secondo l’armonia. Prendersi cura di se e del proprio aspetto. Sentirsi belli ed essere circondati dalla bellezza è davvero importante. Accettare aiuto e complimenti. L’imperatrice è il mondo dell'estetica, della bellezza, del comfort, della famiglia e del lusso. La missione di questa energia è quella di essere parte integrante di un tale Mondo."],
+/*4 энергия*/
+["ENERGIA 4 - IMPERATORE",
+"Queste persone sono mature ed autorevoli, hanno capacità di creare nuove direzioni ed imprese, sanno come fare soldi. La forza viene dall'energia del fuoco, dal processo decisionale e dall'assunzione di responsabilità. Il destino dà grandi opportunità nella vita.",
+"FILOSOFIA DI VITA:",
+"Essere una persona matura che sa prendersi le proprie responsabilità non solo per se stessa ma anche per gli altri. Realizzarsi nella carriera creando il proprio impero. Sviluppare la propria forza di volontà e acquisire autorità, non attraverso l’arroganza ma nobili valori. Porta in positivo l’energia, trovarsi a contatto con grandi uomini, che abbiamo una mentalità matura e imprenditoriale."],
+/*5 энергия*/
+["ENERGIA 5 - IL PAPA",
+"Queste sono persone da un fantastico intelletto, imparano velocemente hanno grandi doti oratorie e la loro vocazione è trasmettere le conoscenze in qualsiasi forma. Non c’è nulla che queste persone non sappiano trovare a livello di informazioni, maghi delle conoscenze. Amano l’ordine e la struttura. Ottimi organizzatori, attenti ai dettagli, veri perfezionisti.",
+"FILOSOFIA DI VITA:",
+"Diventare esperti in un campo e guidare gli altri nelle conoscenze, diventare un mentore autorevole e saggio. Questa energia chiede alla persona stabilità e struttura, seguire le regole, non smettere di acquisire nuove conoscenze. Tradizioni e famiglia sono importanti. Vivere nell’ordine e creare le proprie regole."],
+/*6 энергия*/
+["ENERGIA 6 - AMORE",
+"L'energia dell'amore incondizionato, della scelta, della capacità di sentire il mondo con il cuore. L'incarnazione della bellezza e del fascino. Socievolezza, senso del bello. Auto- espressione attraverso la visuale e la bellezza. Capacità di comunicazion e di affascinare gli altri. Affronteranno nella loro vita il compito karmico legato alle critiche da parte dei propri cari fino a chè non impareranno ad amare se stessi, mettersi al primo posto e scegliere con il cuore.",
+"FILOSOFIA DI VITA:",
+"Amare e farsi amare. Romantizzare la propria vita. Senza amore per se stessi,questa energia non riuscirà a svilupparsi. Imparare a fare le proprie scelte. Questa energia chiede di seguire il cuore e vivere nell’armonia e nel piacere. Focus è sul socializzare, rilassarsi, divertirsi. Riscoprire il piacere della vita, cominciare un hobby, imparare ad entrare in contatto con le persone."],
+/*7 энергия*/
+["ENERGIA 7 - IL CARRO",
+"Questa è l'energia principale della leadership, tutto ciò che riguarda la determinazione, la forza di superare difficoltà, il proprio percorso e una posizione di vita attiva. L’energia che può guidare un'enorme folla di persone. Se la persona non realizza la sua energia di leadership, trascura le proprie idee, non le mette in pratica, comincerà ad avere paura di uscire dalla zona di comfort ed essere sempre nervosa. Tutto ciò che può corrispondere all’immagine di un guerriero riempirà e darà forza. Questa è l'energia del movimento. Una persona si pone degli obiettivi per tutta la vita e li raggiunge guidando gli altri. Questi sono vincitori.",
+"FILOSOFIA DI VITA:",
+"Prima di tutto sarà importante curare il proprio corpo, fare sport perché è da qui che comincia il movimento. Avere le idee chiare del proprio percorso di vita e porsi obiettivi, perché il carro ha sempre bisogno di una direzione. Questa energia chiede obiettivi ed azioni ben decise. Avere un modello di comportamento: penso e agisco, lavorare sulla disciplina."],
+/*8 энергия*/
+["ENERGIA 8 - LA GIUSTIZIA",
+"Le persone con tale energia cercano per tutta la vita modi per cambiare e migliorare il loro destino. Capiscono facilmente la regola: ciò che dai, ricevi. Collegati con molte delle loro precedenti incarnazioni. Questa è l’energia della giustizia, karma ed equilibrio interiore, sono persone che portano chiarezza in ogni situazione, portati per i numeri e creare una struttura in tutto. La personalità è caratterizzata da indipendenza e profondità nelle aspirazioni, nei sentimenti e nei pensieri. Spesso una tendenza a cercare la verità e la giustizia in ogni cosa. Si ha la capacità di aiutare in situazioni stressanti, agire rapidamente e prendere decisioni.",
+"FILOSOFIA DI VITA:",
+"Non entrare emotivamente nelle situazioni, non lottare per ego. Ogni lotta per la giustizia sarà punita. Questa energia si armonizza quando la persona vive secondo sani valori, umiltà ma forza interiore, sincerità e soprattutto in una posizione di osservatrice degli eventi. Importante vivere secondo leggi karmiche, valori nobili e mantenere la parola data."],
+/*9 энергия*/
+["ENERGIA 9 - IL SAGGIO",
+"Sono persone profonde, sagge e fredde in alcuni momenti, ma solo perché vivono grandi processi interiori. Sempre alla ricerca di un significato, naturalmente intelligenti. Si sforzano di apprendere e trasferire la conoscenza. Indipendenti dal mondo esterno, possono raggiungere grandi traguardi da soli. Pensano a lungo e prendono decisioni a lungo, approfondiscono se stessi, cercano significati. Una continua auto analisi. Il compito principale è trovare il significato della propria vita, costruire il proprio mondo. È molto importante non dimenticare ciò che sta accadendo intorno, non cercare di scappare dalla realtà. Portati per la scrittura e la musica.",
+"FILOSOFIA DI VITA:",
+"Questa energia chiede di dedicare tempo al proprio mondo interiore, aumentare conoscenze ed esperienze e affrontare le cose in modo adulto. Imparare ad entrare in contatto con gli altri e condividere la propria esperienza di vita. Ma allo stesso modo prendersi del tempo per sé, meditare, stare nella natura e leggere. Non aver paura della solitudine perché per questa energia è una risorsa."],
+/*10 энергия*/
+["ENERGIA 10 - RUOTA DELLA FORTUNA",
+"Le persone con questa energia sono considerate fortunate, i favoriti dell'Universo, protette dagli angeli fin dall'infanzia. La comunicazione con poteri superiori avviene attraverso suggerimenti e visioni di angeli, nonché sogni ed intuizioni. Sembrano vivere seguendo il flusso della vita, ogni cosa succede per loro. Devono solo prendere una decisione e tutto intorno comincia a muoversi nella giusta direzione. Di norma, scelgono una creatività non classica e speciale. Hanno un destino felice davanti a loro, vivono nel flusso della vita, reagiscono agli impulsi. Per loro è molto importante rendersi la vita semplice e raggiungere il successo con persone che la pensano allo stesso modo. Energia legata a flusso finanziario.",
+"FILOSOFIA DI VITA:",
+"Vivere secondo la gratitudine, saper apprezzare il qui e ora, affidandosi alle forze superiori per il futuro. Non forzare gli eventi, seguendo il flusso. Quando una persona nuota controcorrente, perde molta energia. Imparare a vivere seguendo l'impulso interiore, senza razionalizzare le proprie sensazioni o decisioni. Sento - agisco. È importante raggiungere una prosperità tale che lo stile di vita porti piacere. L’umorismo è il segreto per portare in positivo questa energia."],
+/*11 энергия*/
+["ENERGIA 11 - LA FORZA",
+"Enorme potenziale energetico, una forza gigantesca, carisma in ogni impresa e velocità fulminea. Persone che percepiscono il mondo da una posizione di forza: dello spirito, del pensiero, della parola, forza fisica. Hanno un'elevata resistenza allo stress. E, naturalmente, un corpo fantastico perché gli 11 hanno anche un'enorme forza di volontà per attenersi alla dieta e alla routine di allenamento. Nella loro vita potrebbero esserci abbastanza lezioni e compiti, in modo che imparino a gestire le proprie energie. Sono leader naturali. Se sfruttata in modo ecologico, l’aggressività può essere una energia guida, se trasformata in forza vitale.",
+"FILOSOFIA DI VITA:",
+"Crescita professionale, creazione di un progetto, creazione di una nuova organizzazione, sport, corretta alimentazione, disciplina, stile di vita sano. Questa energia richiede di realizzare il proprio potenziale, migliorare il proprio corpo, risolvere i propri conflitti interiori. Sarà importante agire ovvero realizzare il proprio potenziale, attuare le idee."],
+/*12 энергия*/
+["ENERGIA 12 - L’APPESO O INNOVATORE",
+"Energia della dedizione e compassione. Il chakra del cuore e il servizio alle persone simboleggiano il cambiamento e la transizione verso uno stato nuovo e più elevato. Pertanto, l'energia stessa è carica di un'atmosfera di cambiamento. Queste sono persone che hanno uno sguardo unico e creativo sulle cose, maestri delle soluzioni più insolite ed innovatrici. Incredibile potenziale creativo in: scrittura, musica, design, architettura, ecc.. È l’energia dell’innovazione, ha una piacevole stranezza che aggiunge mistero e mantiene vivo l'interesse nella società. Una persona che non solo ha un'originalità unica ma sa mantenere la sua individualità in ogni circostanza della vita.",
+"FILOSOFIA DI VITA:",
+"Si consiglia di scegliere un'alta missione di servire e aiutare le persone. Si può aiutare attraverso la musica, la creatività, le invenzioni, la consulenza: rendi il tuo obiettivo principale quello di aiutare gli altri e, sulla base di questo, ritrovare il proprio Io. Mantenere un equilibrio nell’autostima e fare qualcosa per te. Se qualcosa nella vita non funziona è perché si è finiti in uno stato di vittimismo e di fermo, ovvero: voglio che le cose cambino ma non faccio nulla."],
+/*13 энергия*/
+["ENERGIA 13 - LA MORTE",
+"Trasformatori di persone che avviano cambiamenti in tutto il mondo, in tutti i processi, nelle persone. Questo archetipo riguarda la morte del passato e la nascita del nuovo, il rischio, la mancanza di paura, la capacità di sentire il limite e di correre rischi dove è difficile. La capacità di prendere rapidamente decisioni, di non rimanere bloccati nel vecchio, di lasciare tutto ciò che è diventato obsoleto. Tutti ciò che non funziona viene lasciato indietro senza rimpianti. Un altissimo livello di individualità e differenza dagli altri. Sono forti nell'iniziare qualcosa da zero e nel costruire da zero.",
+"FILOSOFIA DI VITA:",
+"I 13 nei cambiamenti sono come un pesce nell'acqua, questa è la loro zona di comfort. La trasformazione è lo status quo. È molto importante non percepire questa energia come la morte, perché si tratta di rinascita, dell'inizio di qualcosa di nuovo, nonché di una sensazione di benessere in tutti questi processi, dell'assenza di stress durante il cambiamento. Il lavoro di questa energia è: coraggio, assunzione di rischi, spinta interiore, una carica infinita di energia."],
+/*14 энергия*/
+["ENERGIA 14 - TEMPERANZA",
+"L'energia della moderazione, della pazienza e della capacità di ottenere grandi risultati con piccoli passi. Persone che hanno capacità di guarigione, portati per il mondo olistico. L'energia dell'arte che si realizza frequentando mostre, realizzando film, creando oggetti per musei e marchi di abbigliamento. Le caratteristiche principali di questo codice sono il calore, la compassione, la sensibilità e l'unità a livello dell'anima. Tutti i processi sono collegati all'anima e al cuore e non mirano a benefici materiali o cose mondane. Tutto è su vibrazioni molto elevate.",
+"FILOSOFIA DI VITA:",
+"Fare le cose con calma, prendersi il proprio tempo, secondo i propri ritmi e non tradire mai ciò che si sente a livello di anima. L'energia 14 si manifesta attraverso la raffinatezza, l'aristocrazia e la capacità di apparire eccezionalmente curati. Queste persone hanno la capacità di guarire con le parole e di guarire con le mani. Sono anime mature, possono vedere di più. E’ importante vivere in sintonia con la propria anima e i propri tempi."],
+/*15 энергия*/
+["ENERGIA 15 - DIAVOLO",
+"La quindicesima energia si manifesta attraverso i nostri vizi e tutti i lati oscuri nascosti. Queste sono persone carismatiche, furbe, un passo avanti a tutti, con il dono di vedere le debolezze umane. Una forte intuizione, eventuali abilità occulte, percezione extrasensoriale, incredibile potenziale magico. Le persone sono scanner delle debolezze e difetti umani. Parlano direttamente, così com'è, e sono spesso provocatori, la loro franchezza può ferire. Le grandi capacità oratorie e la capacità di attirare l'attenzione del pubblico non passarono inosservate. Amore per il lusso e capacità di guadagnare grandi fortune.",
+"FILOSOFIA DI VITA:",
+"La tentazione è ciò che metterà alla prova la 15a energia. Soggetto alla tentazione e all'incapacità di controllare i propri demoni interiori. Quindi qui sono importanti disciplina e auto controllo. Inoltre sarà importante accettare i propri lati oscuri e trasformargli in forza."],
+/*16 энергия*/
+["ENERGIA 16 - TORRE",
+"Questa è una gigantesca forza dello spirito. Un'enorme fiducia in se stessi, persone che sanno reagire alla vita. Sanno anche come infondere fiducia negli altri, pertanto sono ottimi motivatori. Riabilitatori che rimettono in piedi le persone anche nelle circostanze più terribili. Costruiscono sempre il mondo spirituale e materiale, ma non pianificano, perché sanno che il mondo è imprevedibile. Queste persone amano anche costruire nel mondo materiale. Facilmente si rialzano in piedi dopo qualsiasi momento difficile. Possono essere ottimi Manager anticrisi.",
+"FILOSOFIA DI VITA:",
+"Questi sono costruttori, il principio fondamentale qui è costruire le sfere di vita. L’energia metterà spesso alla prova per l’ego e distruggerà ciò che non servirà. La leadership è la base di queste persone. La torre è una delle energie più avanzate e potenti. Le persone si sforzano sempre di risvegliarsi, svilupparsi e crescere spiritualmente. Questo è il loro compito, una missione. Inoltre, un'altra parola che caratterizza questa energia è la conoscenza di sé; le persone si sforzano sempre di comprendere il proprio mondo interiore spirituale."],
+/*17 энергия*/
+["ENERGIA 17 - LA STELLA",
+"Il nome dice tutto. Le persone sono artisti, personalità brillanti che possono essere viste a un chilometro di distanza. Attirano l’attenzione senza sforzo. La fama è ciò a cui dovrebbero mirare. Ottenere riconoscimento e approvazione. Queste persone lavorano alla grande nel settore delle pubbliche relazioni, sul palco e sviluppano vari progetti. Individui la cui attività acquisisce immediatamente slancio e diventa un nome familiare. Sanno essere memorabili e lasciare anche un segno luminoso, come una stella cadente dal cielo.",
+"FILOSOFIA DI VITA:",
+"Mostrarsi e farsi conoscere dal mondo, realizzando i propri sogni. Svilupparsi in tutte le direzioni artistiche. Essere visti e ascoltati, mantenendo sempre purezza nelle intenzioni e una immagine e reputazione impeccabili. Vivere una vita piena di eventi."],
+/*18 энергия*/
+["ENERGIA 18 - LA LUNA",
+"La 18a energia è la più magica nella matrice. Il terzo occhio e il magnetismo sono la base. Attrattiva, sensualità, tutto ciò che riguarda la bellezza. Capacità di attirare interesse con mistero e inusualità, bellezza individuale ed energia interiore. Vedono sogni meravigliosi e molto vividi. Gli effetti dei cambiamenti lunari influenzano gli stati d’animo e la forza interiore. Questa è l’energia del potere del pensiero e del subconscio. Sanno come immaginare risultati brillanti e programmare la propria vita per un risultato positivo. Hanno sogni profetici e vedono il futuro. Le capacità creative sono presenti in molti aspetti della loro vita, perché queste persone creano incredibili oggetti d'arte e attirano l'attenzione del mondo intero.",
+"FILOSOFIA DI VITA:",
+"“Ogni cosa che penso, attraggo.” Questa à la pura legge di attrazione è importante quindi conoscere nel dettaglio questa tematica per cambiare la propria vita. E’ consigliabile leggere i libri di Vadim Zeland. Lavorare con le proprie paure e programmare una mentalità positiva."],
+/*19 энергия*/
+["ENERGIA 19 - IL SOLE",
+"Energia del milionario, leader nati. Persone destinate al successo. Hanno un aspetto solare e grande attrattiva. Sanno come far innamorare le persone di se stesse e far sì che tutti vogliano contattarli, interagire e collaborare con loro. Questa energia ha una caratteristica come la fortuna al terzo tentativo. Cioè, alcuni progetti potrebbero non funzionare la prima e la seconda volta, e il destino sembra metterli alla prova: “Dai, mostrami se questo è importante per te, se ti piace davvero”. Questi sono individui che lasciano entrare l'abbondanza nel mondo. Conduttori di grandi soldi.",
+"FILOSOFIA DI VITA:",
+"L’abbondanza e la generosità sono tratti importanti del 19° archetipo. Tutte le leggi dell’abbondanza che spopolano sui social, funzionano doppiamente alla 19ma energia. Regola della terza volta: successo il terzo anno, la terza volta, fare ancora una volta, qualcosa che sia un multiplo di tre e questa legge funzionerà. È molto importante non volere qualcosa in particolare adesso, perché l’atteggiamento “voglio tutto in una volta” bloccherà completamente l’energia. Il Sole non ha restrizioni su quale attività o area lavorare. L'unica cosa importante è pagare bene le persone, creare posti di lavoro e assumere la posizione di genitore adulto, prendersi cura, dare e non essere avidi."],
+/*20 энергия*/
+["ENERGIA 20 - IL GIUDIZIO",
+"Capacità di ricevere informazioni da un flusso aperto, il campo energetico di qualsiasi persona. Le migliori guide nella regressione o nella lettura dei registri Akashici, un canale aperto di intuizione, conoscenza chiara. Persone che operano nel campo dell'informazione e sanno come trovarle. Hanno la capacità di trasmettere sentimenti, immagini e sono in grado di trasmettere bene a grandi masse. Il punto chiave di questa energia è la famiglia e, molto spesso, le proprie origini, la patria. Queste sono persone che possono risvegliare gli altri, ridare valore alla propria generazione, famiglia, paese.",
+"FILOSOFIA DI VITA:",
+"È importante rispettare le posizione gerarchiche e i propri antenati. Queste persone vengono nella loro famiglia per riprogrammarla. La propria forza deriva dalla famiglia. Lavorare con le informazioni e su larga scala sarà importante."],
+/*21 энергия*/
+["ENERGIA 21 - IL MONDO",
+"Queste persone sono dotate di un’energia incredibilmente positiva e diplomatica. Sanno entrare in contatto con qualsiasi persona, sentirsi a proprio agio in qualsiasi situazione e contesto. Vivono in assenza di limiti e sognano in grande. Il desiderio e l'alta missione di tali individui è unire popoli, religioni, smussare angoli nelle aziende, riconciliare le persone. Questi sono cittadini del mondo, portati per le lingue straniere, spesso o si trasferiscono o si realizzano all’estero. Queste persone possono essere vegane perché non vogliono danneggiare la natura e uccidere gli animali. Vanno oltre i propri limiti, entrano nella paura e affrontano le sfide. Possono letteralmente portare qualcosa al mondo intero.",
+"FILOSOFIA DI VITA:",
+"Portare le proprie idee a livello globale. Avere uno stile di vita sostenibile, svilupparsi online, provarsi nello sviluppo di nuove professioni avanzate, alte tecnologie. Non fare nulla che possa danneggiare la terra, anche nel piccolo come ad esempio fumare. Viaggiare e scoprire culture diverse."],
+/*22 энергия*/
+["ENERGIA 22 - IL GIULLARE",
+"Questa è l’energia che include tutte le qualità e missioni delle altre energie, quindi è dotata di un'enorme quantità di talento. Il giullare ha qualità come leggerezza, libertà di pensiero e mancanza di confini. E’ anche una mancanza di paure. Non sono persone che amano limiti. Forte umorismo. A questa energia piace spesso viaggiare perché aiuta ad espandere ulteriormente la sua immagine e visione delle cose e del mondo. Innovatori che generano idee, entusiasmo nei progetti, cominciano facilmente nuove tappe di vita. Creano qualcosa di nuovo ed unico. Talento con i bambini ed organizzare feste.",
+"FILOSOFIA DI VITA:",
+"Non raccontare i propri piani a nessuno, sognare in grande, muoversi come ci si sente nella vita fidandosi dell'Universo. Non rendersi la vita difficile e complicata, evitare di cadere nel pessimismo. Essere sempre pronti a cominciare nuovi cicli di vita. Capire che ciò che non possono realizzare gli altri la 22ma energia può. La vita deve essere presa come un gioco, sapersi divertire. La persona deve fidarsi del proprio impulso interiore e non di ciò che dicono gli altri. Seguire il proprio istinto perchè è come se fosse una bussola. Per queste persone è importante andare nella vita laddove si sentono libere e sentono leggerezza, dove possono realizzarsi al meglio."]
+];
+				
+</script>
+<style>
+@import url('../css2'); 
+@import	url(https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap); 
+
+.inte,.cls-28,.cls-30,.cls-67,.cls-34,.cls-35,.cls-36,.cls-39,.cls-43,.cls-51,.cls-66,.cls-54,.cls-55,.cls-56,.cls-57,.cls-58,.cls-59,.cls-60,.cls-33, .cls-43, .cls-28,.cls-42,.cls-48, .cls-44,.cls-61, .cls-52, #mission, #table3, #zonainfo, #table2, .hh2, .hh4, .hh3, input
+{
+.hh3
+{
+font-weight:bold;		
+}
+font-family: 'Cormorant', sans-serif; 
+}
+.inte
+{
+color: #ffff;
+background: #0A393F;
+font-weight:bold;
+cursor: pointer;
+animation-duration: 3s;
+border: 1px grey;
+border-radius: 12px;
+}	
+.small
+{
+	border: 1px solid rgb(54, 54, 54);
+	font-size: 24;
+	width: 160px;
+	margin: 5px;
+	padding: 5px;	
+}
+.big
+{
+	border: 2px black;
+	font-size: 28pt;
+	width: 200px;
+	margin: 10px;
+	padding: 5px;	
+	border-radius: 12px;
+}
+.inte:hover
+{
+	color: grey;
+	background: #d2f8fc;
+	border: 1px #0A393F;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+		
+.yete
+{
+	color:white;
+    font-weight: 600;
+}
+.yete2
+{
+	color:#0A393F;
+    font-weight: 600;
+}	
+td.td_chakra{
+	text-align:left;
+	padding-left: 15px;
+	
+}
+.health-map-table
+{
+	//width: 680px;
+	background:#444!important;
+	text-align:center;
+}
+.health-map-table td
+{
+	//font-size:120%;
+	border-collapse:collapse;
+}
+.cls-1
+{
+	isolation:isolate
+	fill="currentColor"
+}
+.cls-2
+{
+	opacity:.75
+}
+.cls-17,.cls-18,.cls-27,.cls-3,.cls-31,.cls-32,.cls-37,.cls-4,.cls-5,.cls-64,.cls-65,.cls-7
+{
+	fill:none}
+.cls-65
+{
+	stroke:#000
+}
+
+.cls-55 {
+  color: #222 !important; /* текст у HTML */
+  fill: #ffffff
+}
+text.cls-55, tspan.cls-55 {
+  fill: #222 !important; /* текст у SVG */
+}
+
+}
+.cls-5,.cls-7,.cls-17,.cls-18,.cls-24,.cls-21,.cls-3,.cls-4,.cls-488,.cls-53,.cls-52
+{
+	color: #444 
+}
+
+.cls-488
+{
+	stroke:#444 !important; 
+    stroke-width:2px
+}
+	
+.cls-17,.cls-18,.cls-21,.cls-24,.cls-27,.cls-3,.cls-31,.cls-32,.cls-37,.cls-4,.cls-5,.cls-7
+{
+	stroke-miterlimit:10
+}
+.cls-21,.cls-24,.cls-3,.cls-5,.cls-7
+{
+	stroke-width:2px
+}
+.cls-6,.cls-8,.cls-63
+{
+	fill:#444
+}
+.cls-10
+{
+	fill:#5d3a8a
+}
+.cls-64
+{
+	stroke:#444;
+	stroke-width:3px
+}
+.cls-27
+{
+	stroke:#5d3a8a;
+}
+.cls-13
+{
+	fill:#526dfc;
+}
+.cls-15 
+{
+	fill:#74a3ab;
+}
+.cls-17,.cls-18,.cls-27,.cls-31,.cls-32,.cls-37
+{
+	stroke-width:.5px
+}
+.cls-18
+{
+	stroke-dasharray: 8 4
+}
+.cls-19
+{
+	fill:#d14a44
+}
+.cls-31
+{
+	stroke:#d14a44
+}
+.cls-30,.cls-36,.cls-48,.cls-54,.cls-57,.cls-59
+{
+	fill:#fff;
+	text-shadow: black 0 0 5px;
+}
+.cls-1
+{
+	fill:black
+	stroke: #444 !important; 
+}
+.cls-22
+{
+	fill:#ff8318
+}
+.cls-24,.cls-21,.cls-66,.cls-67
+{
+	fill:#fff
+}
+.cls-25
+{
+	fill:#fdca46
+}
+.cls-28,.cls-33,.cls-39,.cls-44,.cls-48,.cls-51,.cls-66
+{
+	font-size:18px
+}
+.cls-44
+{
+	color: black;
+}
+.cls-28,.cls-30,.cls-67,.cls-34,.cls-35,.cls-36,.cls-39,.cls-43,.cls-51,.cls-66,.cls-54,.cls-55,.cls-56,.cls-57,.cls-58,.cls-59,.cls-60
+{
+	font-weight:700;
+	text-shadow: black 0 0 5px;
+	color: white;
+}
+.cls-21,.cls-55,.cls-58,.cls-60 /* Це не прибере перекриття, але може допомогти, якщо SVG інтерактивний */
+{
+	
+	/*fill: white !important;  саме fill, не color */
+}
+	
+.cls-33, .cls-43, .cls-28
+{
+	color:grey;
+}
+
+.cls-29,.cls-35,.cls-41
+{
+	letter-spacing:-0.01em;
+}
+.cls-30,.cls-67,.cls-43
+{
+	font-size:14px
+}
+.cls-32
+{
+	stroke:#fff
+}
+
+
+.cls-36
+{
+	font-size:8px
+}
+.cls-37
+{
+	stroke:#d14a44
+}
+.cls-38
+{
+	fill:#d14a44
+}
+.cls-44,.cls-61
+{
+	font-style:'Cormorant';
+}
+.cls-45
+{
+	letter-spacing:-0.01em
+}
+.cls-46{
+	letter-spacing:.01em
+}
+.cls-49{
+	letter-spacing:-0.04em
+}
+.cls-50{
+	letter-spacing:-0.03em
+}
+.cls-52{
+	font-size:41.04px;
+	fill:red;
+	}
+.cls-53
+{
+	fill:black
+}
+.cls-54,.cls-55,.cls-56{
+	font-size:40px;
+}
+.cls-56{
+	fill:#fff;
+}
+.cls-57,.cls-58
+{
+	font-size:18px;
+}
+.cls-59,.cls-60
+{
+	font-size:25px;
+}
+.cls-61
+{
+	font-size:12px;
+}
+.cls-64, .cls-28
+{
+	color: #444;
+}
+.cls-62
+{
+	letter-spacing:-0.07em
+}
+.matrix-value-point
+{
+	text-anchor:middle;
+	alignment-baseline:middle;
+	text-align: center;
+}
+#matrix-legend1
+{
+	position:absolute;
+	top:0;
+	right:400px;
+	padding-top:20px;
+	padding-right:20px;
+}
+#prednazn
+{
+	margin-bottom:20px;
+}
+#prednazn
+{
+	font-size:70%;
+}
+#prednazn h3
+{
+	font-size:130%;
+}
+.table td,.table th
+{
+	height:40px;
+	
+}
+#sky1,#terra1,#for_self1,#male1,#female1,#socium1,#spirit1,#planet1
+{
+	border:2px solid #000;
+	background: #0A393F;
+	border-radius:50%;
+	width:34px;
+	height:34px;
+	display:inline-block;
+	text-align:center;
+	line-height:30px
+}
+body
+{	
+    margin: 0px;
+	background-color:#fff;
+}
+#row
+{
+	display:inline-block;
+	margin-left:0;
+	margin-bottom:50px;
+	margin-top:25px;
+	max-width:550px;
+	min-width:380px;
+	width:100%;
+}
+.row
+{
+	display:inline-block;
+	margin-left:0;
+	margin-bottom:20px;
+	margin-top:20px;
+	min-width:380px;
+	width:100%;
+}
+#table2
+{
+	width:100%;
+}
+#matrix
+{
+	float:left;
+	margin-left:1%;
+	margin-top:25px;
+	width:100%;
+	max-width:800px;
+	min-width:380px;
+}
+.hh2{
+	font-size:xxx-large;
+	text-align:center;
+	margin-top:55px;
+	margin-bottom:0;
+}
+	
+.hh3
+{	
+	//font-size:x-large;
+	color:#0A393F;
+	text-align:center;
+	margin-top:0;
+	margin-bottom:10px;
+}
+
+	
+.hh4
+{	
+	//font-size:x-large;
+	color:#0A393F;
+	text-align:center;
+	margin-top:0;
+	margin-bottom:10px;
+}
+.more
+{
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 100%;
+	width: 544px;
+	min-width: 320px;
+	float: left;
+
+//	background: red;
+}
+.more2
+{
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 20px;
+	width: 408px;
+	min-width: 320px;
+	float: left;
+
+//	background: blue;
+}
+.wite
+{
+	color: white;
+}
+.sha
+{
+	 text-shadow: white 0 0 5px;
+}
+.sha2
+{
+	text-shadow: 1px 0 1px #000, 
+0 1px 1px #000, 
+-1px 0 1px #000, 
+0 -1px 1px #000;
+}
+.pp
+{
+margin-block-start: 1em;
+margin-block-end: 1em;
+}
+
+	
+
+	
+</style>
+	
+
+<div id="INTRO" style="display: block; background-image: url('hhttps://github.com/Met8ram/calcolatrice/blob/main/img/white.png?raw=true'); width: 100%; height: 100vh; position: absolute; top: 0; border: 1px solid rgba(0, 0, 0, 0); background-size: cover; background-position: center;">
+
+<h2 class="yete2 hh2" font-size: 28pt; margin-top: 260px;"> Calcolatrice</h2>
+<h2 class="yete2 hh2" style="font-weight:bolder; font-size: 45pt; margin-bottom: 20px"> MATRICE DELL DESTINO</h2>
+
+
+<h2 class="yete2 hh2" style="font-weight:bolder; font-size: 18pt; margin-top: 40px; margin-bottom: 1px">Inserire i dati:</h2>
+
+<h2 class="hh2" style="position: relative; margin-top: 5px">
+<input id="birthday" class="inte big" onkeydown="return KD(event.key, this.id)" onkeyup="Dots(this.id)" placeholder="gg.mm.aaaa" title="Data" type="text" inputmode="tel">
+<input type="button" class="inte big" value="Calcolare" onclick="Calc()" ontouchend="Calc()">
+</h2>
+<h2 class="yete2 sha hh2" id="elabel" style="font-weight:bolder; color: crimson; font-size: 18pt; margin-top: 12px; margin-bottom: 70px; visibility: hidden">!!!</h2>
+
+</div>
+
+<div id="SCREEN" style="display: none;">
+<div class="row">
+<h2 class="hh2" style="margin-top: 0px">
+<input type="button" class="inte small" value="Indietro" onclick="Slide(true)">
+<input type="button" class="inte small" value="Stampa" onclick="Print()">
+</h2>
+</div>
+
+<div class="row">
+
+<svg viewbox="0 0 680 600" id="matrix" style="zoom: 0.8; float: left; margin-bottom: 50px">
+<defs> <pattern id="image1" x="-100" y="100" patternunits="userSpaceOnUse" height="100%" width="100%">
+</pattern>
+</defs>
+
+<g class="cls-1">
+<g>
+
+<g>
+<rect class="cls-3" x="163.63" y="126.14" width="340.16" height="340.16"></rect> <!-- fill="#000"-->
+</g>
+
+<g>
+<rect class="cls-3" x="227.87" y="127.54" width="340.16" height="340.16" transform="translate(-158.13 367.16) rotate(-45)"></rect>
+</g>
+<!--cls-4-->
+<circle class="cls-488" cx="333.7" cy="296.22" r="156.92" fill="url(#image1)" fill-opacity="1"></circle>
+<polygon class="cls-4" points="333.7 12.76 534.14 95.78 617.17 296.22 534.14 496.66 333.7 579.68 133.26 496.66 50.24 296.22 133.26 95.78 333.7 12.76">
+</polygon>
+<line class="cls-4" x1="333.7" y1="12.76" x2="333.7" y2="579.68"></line>
+<line class="cls-4" x1="50.24" y1="296.22" x2="617.17" y2="296.22"></line>
+<g>
+<line class="cls-5" x1="436.22" y1="398.73" x2="232.02" y2="194.54"></line>
+<polygon class="cls-6" points="437.48 389.52 434.47 396.99 427.01 400 444.66 407.18 437.48 389.52">
+</polygon>
+<polygon class="cls-6" points="222.03 184.55 241.85 192.87 232.76 195.28 230.36 204.37 222.03 184.55">
+</polygon>
+</g>
+<g>
+<line class="cls-7" x1="434.67" y1="195.25" x2="232.02" y2="397.91"></line>
+<polygon class="cls-8" points="444.66 185.26 424.84 193.59 433.93 196 436.34 205.08 444.66 185.26">
+</polygon>
+<polygon class="cls-8" points="222.03 407.89 230.35 388.07 232.76 397.16 241.85 399.57 222.03 407.89">
+</polygon>
+</g>
+<g>
+<g>
+<circle class="cls-10" cx="333.7" cy="41.1" r="28.35"></circle>
+</g>
+</g>
+<g>
+<g>
+<circle class="cls-13" cx="333.7" cy="89.62" r="18.43"></circle>
+</g>
+</g>
+<g>
+<g>
+<circle class="cls-15" cx="333.7" cy="124.12" r="14.17"></circle>
+</g>
+</g>
+<g>
+<line class="cls-17" x1="490.62" y1="296.22" x2="488.85" y2="297.99"></line>
+<line class="cls-18" x1="485.28" y1="301.56" x2="337.26" y2="449.58"></line>
+<line class="cls-17" x1="335.47" y1="451.37" x2="333.7" y2="453.14"></line>
+</g>
+<g>
+<g>
+<circle class="cls-19" cx="397.95" cy="552.74" r="28.35" transform="translate(-338.53 441.89) rotate(-45)">
+</circle>
+</g>
+</g>
+<circle class="cls-21" cx="397.94" cy="504.22" r="18.43" transform="translate(-304.22 427.67) rotate(-45)">
+</circle>
+<g>
+<g>
+<circle class="cls-22" cx="397.59" cy="469.72" r="14.17" transform="translate(-279.93 417.32) rotate(-45)">
+</circle>
+</g>
+</g>
+<g>
+<g>
+<circle class="cls-10" cx="78.59" cy="296.22" r="28.35"></circle>
+</g>
+</g>
+<g>
+<g>
+<circle class="cls-13" cx="127.11" cy="295.86" r="18.43"></circle>
+</g>
+</g>
+<g>
+<g>
+<circle class="cls-15" cx="161.61" cy="296.22" r="14.17"></circle>
+</g>
+</g>
+<circle class="cls-21" cx="604.54" cy="297.62" r="18.43" transform="translate(-97.62 513.25) rotate(-45)">
+</circle>
+<g>
+<g>
+<circle class="cls-22" cx="570.04" cy="297.62" r="14.17" transform="translate(-107.73 488.85) rotate(-45)">
+</circle>
+</g>
+</g>
+<g>
+<circle class="cls-24" cx="217.55" cy="117.22" r="28.35" transform="translate(-83.41 186.77) rotate(-45)">
+</circle>
+</g>
+<circle class="cls-24" cx="514.1" cy="476.62" r="28.35"></circle>
+<g>
+<g>
+<circle class="cls-25" cx="397.94" cy="297.62" r="28.35" transform="translate(-158.13 367.16) rotate(-45)">
+</circle>
+</g>
+</g>
+<g>
+<g>
+<circle class="cls-19" cx="653.13" cy="297.62" r="28.35" transform="translate(-83.39 547.61) rotate(-45)">
+</circle>
+</g>
+</g>
+<circle class="cls-21" cx="413.18" cy="375.69" r="14.17"></circle>
+<circle class="cls-21" cx="518.18" cy="367.04" r="14.17" transform="translate(-172.01 472.52) rotate(-45)">
+</circle>
+<circle class="cls-21" cx="467.37" cy="417.85" r="14.17" transform="translate(-222.82 451.47) rotate(-45)">
+</circle>
+<text x="-64.24" y="-1.4"></text>
+<g>
+<circle class="cls-24" cx="217.55" cy="478.01" r="28.35" transform="translate(-338.53 292.44) rotate(-45)">
+</circle>
+</g>
+<circle class="cls-24" cx="514.1" cy="115.82" r="28.35"></circle>
+<g>
+<text class="cls-28" transform="translate(0 300)">0 anni</text>
+</g>
+
+<g>
+<text class="cls-28" transform="translate(77 97)">10 anni</text>
+</g>
+
+<g>
+<text class="cls-28" transform="translate(307 10)">20 anni</text>
+</g>
+
+<g>
+<text class="cls-28" transform="translate(540 95)">30 anni</text>
+</g>
+
+<g>
+<text class="cls-28" transform="translate(624 300)">40 anni</text>
+</g>
+
+<g>
+<text class="cls-28" transform="translate(542 503)">50 anni</text>
+</g>
+
+<g>
+<text class="cls-28" transform="translate(307 592)">60 anni </text>
+</g>
+
+<g>
+<text class="cls-28" transform="translate(72 500)">70 anni</text>
+</g>
+
+<text class="cls-44" transform="translate(247.77 205.48) rotate(45)"><tspan>Linea antenati</tspan><tspan x="5" dy="1em">degli uomini</tspan></text>
+<text class="cls-44" transform="translate(354.7 269.98) rotate(-45)"><tspan>Linea antenati</tspan><tspan x="8" dy="1em">delle donne</tspan></text>
+
+
+<text class="cls-44" transform="translate(552 560)" style="fill: #444"><tspan style="font-size: 36pt"></tspan><tspan x="0" dy="1em" style="font-size: 13pt">T.M. Tetiana Matry</tspan></text>
+
+<g>
+<text class="cls-33" transform="translate(310 328)"><tspan x="0" dy="1em">Zona di</tspan><tspan x="-3" dy="1em">Comfort</tspan></text>
+</g>
+
+<text class="cls-52" transform="translate(416 342)">€</text>
+<text class="cls-52" transform="translate(345 405)">❤</text>
+</g>
+<g>
+<g>
+<circle cx="397.9" cy="195.1" r="14.2" transform="translate(-85.6 337.1) rotate(-45)" style="fill:#4c8656">
+</circle>
+</g>
+</g>
+<g>
+<g>
+<circle cx="295.5" cy="297.6" r="14.2" transform="translate(-188.1 294.7) rotate(-45)" style="fill:#4c8656">
+</circle>
+</g>
+</g>
+<g id="points-basic-mode">
+<text class="cls-56 matrix-value-point" id="point-01" transform="translate(76.34 299.89)">8</text>
+<text class="cls-54 matrix-value-point" id="point-02" transform="translate(331.46 44.83)">8</text>
+<text class="cls-54 matrix-value-point" id="point-03" transform="translate(586.58 299.89)">19</text>
+<text class="cls-54 matrix-value-point" id="point-04" transform="translate(331.46 555.39)">8</text>
+<text class="cls-55 matrix-value-point" id="point-05" transform="translate(331.46 299.89)">7</text>
+<text class="cls-55 matrix-value-point" id="point-06" transform="translate(151.06 120.42)">16</text>
+<text class="cls-55 matrix-value-point" id="point-07" transform="translate(511.85 120.42)">9</text>
+<text class="cls-55 matrix-value-point" id="point-08" transform="translate(511.85 479.72)">9</text>
+<text class="cls-55 matrix-value-point" id="point-09" transform="translate(151.06 479.72)">16</text>
+<text class="cls-57 matrix-value-point" id="point-10" transform="translate(333.69 470.62)">15</text>
+<text class="cls-57 matrix-value-point" id="point-11" transform="translate(505.79 297.56)">8</text>
+<text class="cls-58 matrix-value-point" id="point-12" transform="translate(413.17 377.27)">5</text>
+<text class="cls-58 matrix-value-point" id="point-13" transform="translate(403.12 417.91)">20</text>
+<text class="cls-58 matrix-value-point" id="point-14" transform="translate(453.93 366.89)">13</text>
+<text class="cls-57 matrix-value-point" id="point-15" transform="translate(161.59 297.56)">15</text>
+<text class="cls-57 matrix-value-point" id="point-16" transform="translate(333.69 126.71)">15</text>
+<text class="cls-59 matrix-value-point" id="point-17" transform="translate(126.2 299.56)">5</text>
+<text class="cls-59 matrix-value-point" id="point-18" transform="translate(334.8 93.24)">5</text>
+<text class="cls-60 matrix-value-point" id="point-19" transform="translate(334.81 505.91)">5</text>
+<text class="cls-60 matrix-value-point" id="point-20" transform="translate(539.4 299.56)">9</text>
+<text class="cls-57 matrix-value-point" id="point-21" transform="translate(231.26 297.56)">22</text>
+<text class="cls-57 matrix-value-point" id="point-22" transform="translate(333.7 195.1)">22</text>
+</g>
+<g id="points-extended-mode">
+<circle class="cls-21" cx="276.25" cy="175.93" r="14.17" transform="translate(-107.73 245.47) rotate(-45)">
+</circle>
+<text class="cls-58 matrix-value-point" id="point-23" transform="translate(212 175.83)">21</text>
+<circle class="cls-21" cx="251.86" cy="151.53" r="18.43" transform="translate(-97.62 221.08) rotate(-45)">
+</circle>
+<text class="cls-60 matrix-value-point" id="point-24" transform="translate(186.71 153.27)">10</text>
+<circle class="cls-21" cx="455.4" cy="174.53" r="14.17"></circle>
+<text class="cls-58 matrix-value-point" id="point-25" transform="translate(455.38 175.83)">14</text>
+<circle class="cls-21" cx="479.79" cy="150.13" r="18.43"></circle>
+<text class="cls-60 matrix-value-point" id="point-26" transform="translate(477.89 153.77)">5</text>
+<circle class="cls-21" cx="455.4" cy="417.91" r="14.17"></circle>
+<text class="cls-58 matrix-value-point" id="point-27" transform="translate(455.39 420.05)">14</text>
+<circle class="cls-21" cx="479.79" cy="442.31" r="18.43"></circle>
+<text class="cls-60 matrix-value-point" id="point-28" transform="translate(480.89 445.41)">5</text>
+<circle class="cls-21" cx="276.25" cy="419.31" r="14.17" transform="translate(-279.83 316.76) rotate(-45)">
+</circle>
+<text class="cls-58 matrix-value-point" id="point-29" transform="translate(212 419.06)">21</text>
+<circle class="cls-21" cx="251.86" cy="443.7" r="18.43" transform="translate(-304.22 306.65) rotate(-45)">
+</circle>
+<text class="cls-60 matrix-value-point" id="point-30" transform="translate(188.71 445.41)">10</text>
+<text class="cls-33" id="point-31" transform="translate(50.9 254.94)">22</text>
+<text class="cls-33" id="point-32" transform="translate(58.5 236.19)">14</text>
+<text class="cls-33" id="point-33" transform="translate(66.22 216.83)">20</text>
+<text class="cls-43" id="point-34" transform="translate(70.26 198.39)">6</text>
+<text class="cls-33" id="point-35" transform="translate(81.28 180.83)">10</text>
+<text class="cls-33" id="point-36" transform="translate(89.13 161.62)">22</text>
+<text class="cls-33" id="point-37" transform="translate(96.7 143.39)">11</text>
+<text class="cls-33" id="point-38" transform="translate(159.66 77.79)">11</text>
+<text class="cls-33" id="point-39" transform="translate(177.74 70.14)">22</text>
+<text class="cls-33" id="point-40" transform="translate(196.73 62.48)">10</text>
+<text class="cls-43" id="point-41" transform="translate(211.32 54.83)">6</text>
+<text class="cls-33" id="point-42" transform="translate(232.77 47.17)">20</text>
+<text class="cls-33" id="point-43" transform="translate(251.53 39.52)">14</text>
+<text class="cls-33" id="point-44" transform="translate(269.81 31.87)">22</text>
+<text class="cls-33" id="point-45" transform="translate(385.66 31.87)">15</text>
+<text class="cls-33" id="point-46" transform="translate(404.94 39.52)">7</text>
+<text class="cls-33" id="point-47" transform="translate(422.7 47.17)">6</text>
+<text class="cls-43" id="point-48" transform="translate(443.15 54.83)">17</text>
+<text class="cls-33" id="point-49" transform="translate(459.73 62.48)">7</text>
+<text class="cls-33" id="point-50" transform="translate(478.72 70.14)">8</text>
+<text class="cls-33" id="point-51" transform="translate(496.81 77.79)">17</text>
+<text class="cls-33" id="point-52" transform="translate(558.77 143.39)">10</text>
+<text class="cls-33" id="point-53" transform="translate(566.4 161.62)">19</text>
+<text class="cls-33" id="point-54" transform="translate(574.09 180.83)">11</text>
+<text class="cls-43" id="point-55" transform="translate(583.4 198.39)">10</text>
+<text class="cls-33" id="point-56" transform="translate(588.82 216.83)">21</text>
+<text class="cls-33" id="point-57" transform="translate(597.53 236.19)">11</text>
+<text class="cls-33" id="point-58" transform="translate(604.7 254.94)">3</text>
+<text class="cls-33" id="point-59" transform="translate(604.7 344.84)">3</text>
+<text class="cls-33" id="point-60" transform="translate(597.13 363.64)">11</text>
+<text class="cls-33" id="point-61" transform="translate(589.28 382.27)">21</text>
+<text class="cls-43" id="point-62" transform="translate(583.26 401.19)">10</text>
+<text class="cls-33" id="point-63" transform="translate(574.09 418.92)">11</text>
+<text class="cls-33" id="point-64" transform="translate(566.5 437.58)">19</text>
+<text class="cls-33" id="point-65" transform="translate(558.77 455.95)">10</text>
+<text class="cls-33" id="point-66" transform="translate(496.81 522.12)">17</text>
+<text class="cls-33" id="point-67" transform="translate(478.03 529.89)">8</text>
+<text class="cls-33" id="point-68" transform="translate(459.6 537.53)">7</text>
+<text class="cls-43" id="point-69" transform="translate(442.39 546.37)">17</text>
+<text class="cls-33" id="point-70" transform="translate(422.7 552.81)">6</text>
+<text class="cls-33" id="point-71" transform="translate(404.14 560.35)">7</text>
+<text class="cls-33" id="point-72" transform="translate(385.66 568.11)">15</text>
+<text class="cls-33" id="point-73" transform="translate(270.81 568.11)">22</text>
+<text class="cls-33" id="point-74" transform="translate(252.33 560.35)">14</text>
+<text class="cls-33" id="point-75" transform="translate(233.77 552.81)">20</text>
+<text class="cls-43" id="point-76" transform="translate(212.08 546.37)">6</text>
+<text class="cls-33" id="point-77" transform="translate(196.69 537.53)">10</text>
+<text class="cls-33" id="point-78" transform="translate(178.26 529.89)">22</text>
+<text class="cls-33" id="point-79" transform="translate(161.48 522.12)">11</text>
+<text class="cls-33" id="point-80" transform="translate(97.7 455.95)">11</text>
+<text class="cls-33" id="point-81" transform="translate(89.98 437.58)">22</text>
+<text class="cls-33" id="point-82" transform="translate(82.39 418.92)">10</text>
+<text class="cls-43" id="point-83" transform="translate(71.22 401.19)">6</text>
+<text class="cls-33" id="point-84" transform="translate(67.2 382.27)">20</text>
+<text class="cls-33" id="point-85" transform="translate(59.34 363.64)">14</text>
+<text class="cls-33" id="point-86" transform="translate(51.77 344.83)">22</text>
+</g>
+<g id="По_годам" data-name="По годам">
+<text class="cls-61" transform="translate(71.7 252.94)">1-2</text>
+<text class="cls-61" transform="translate(79.14 234.61)">2-3</text>
+<text class="cls-61" transform="translate(86.39 216.23)">3-4</text>
+<text class="cls-61" transform="translate(102.39 179.23)">6-7</text>
+<text class="cls-61" transform="translate(109.39 160.23)">7-8</text>
+<text class="cls-61" transform="translate(117.39 143.23)">8-9</text>
+<text class="cls-61" transform="translate(176.55 85.51)">11-12</text>
+<text class="cls-61" transform="translate(195.09 77.79)">12-13</text>
+<text class="cls-61" transform="translate(214.38 70.22)">13-14</text>
+<text class="cls-61" transform="translate(250.51 54.83)">16-17</text>
+<text class="cls-61" transform="translate(268.88 47.18)">17-18</text>
+<text class="cls-61" transform="translate(287.83 39.52)">18-19</text>
+<text class="cls-61" transform="translate(364 39.52)">21-22</text>
+<text class="cls-61" transform="translate(382.75 47.17)">22-23</text>
+<text class="cls-61" transform="translate(401.13 54.83)">23-24</text>
+<text class="cls-61" transform="translate(438.01 70.14)">26-27</text>
+<text class="cls-61" transform="translate(457.01 77.79)">27-28</text>
+<text class="cls-61" transform="translate(475.26 85.51)">28-29</text>
+<text class="cls-61" transform="translate(533.75 143.23)">31-32</text>
+<text class="cls-61" transform="translate(541.12 160.23)">32-33</text>
+<text class="cls-61" transform="translate(549.78 179.23)">33-34</text>
+<text class="cls-61" transform="translate(564.77 216.23)">36-37</text>
+<text class="cls-61" transform="translate(572.77 234.61)">37-38</text>
+<text class="cls-61" transform="translate(579.07 252.94)">38-39</text>
+<text class="cls-61" transform="translate(532.7 454.08)">48-49</text>
+<text class="cls-61" transform="translate(540.32 435.69)">47-48</text>
+<text class="cls-61" transform="translate(547.66 417.27)">46-47</text>
+<text class="cls-61" transform="translate(563.3 380.28)">43-44</text>
+<text class="cls-61" transform="translate(570.89 361.52)">42-43</text>
+<text class="cls-61" transform="translate(578.49 343.82)">41-42</text>
+<text class="cls-61" transform="translate(364.55 558.01)">58-59</text>
+<text class="cls-61" transform="translate(383.09 550.29)">57-58</text>
+<text class="cls-61" transform="translate(402.38 542.68)">56-57</text>
+<text class="cls-61" transform="translate(438.51 527.33)">53-54</text>
+<text class="cls-61" transform="translate(456.88 519.68)">52-53</text>
+<text class="cls-61" transform="translate(475.83 512.02)">51-52</text>
+<text class="cls-61" transform="translate(176 512.02)">68-69</text>
+<text class="cls-61" transform="translate(194.75 519.67)">67-68</text>
+<text class="cls-61" transform="translate(213.13 527.33)">66-67</text>
+<text class="cls-61" transform="translate(250.01 542.68)">63-64</text>
+<text class="cls-61" transform="translate(269.01 550.29)">62-63</text>
+<text class="cls-61" transform="translate(287.26 558.01)">61-62</text>
+<text class="cls-61" transform="translate(73.75 343.82)">78-79</text>
+<text class="cls-61" transform="translate(81.12 361.52)">77-78</text>
+<text class="cls-61" transform="translate(88.78 380.28)">76-77</text>
+<text class="cls-61" transform="translate(103.77 417.27)">73-74</text>
+<text class="cls-61" transform="translate(111.77 435.69)">72-73</text>
+<text class="cls-61" transform="translate(119.07 454.08)">71-72</text>
+
+<text class="cls-28" transform="translate(97.69 400.12)">75 anni</text>
+<text class="cls-28" transform="translate(515 400.12)">45 anni</text>
+<text class="cls-28" transform="translate(235.6 531.38)">65 anni</text>
+<text class="cls-28" transform="translate(380 531.38)">55 anni</text>
+<text class="cls-28" transform="translate(235.22 69.42)">15 anni</text>
+<text class="cls-28" transform="translate(380 69.22)">25 anni</text>
+<text class="cls-28" transform="translate(97.49 198.76)">5 anni</text>
+<text class="cls-28" transform="translate(515 198.76)">35 anni</text>
+
+<g>
+<line class="cls-63" x1="155.1" y1="505.93" x2="310.36" y2="570.25"></line>
+<g>
+<circle class="cls-63" cx="296.97" cy="539.49" r="2.83" transform="translate(-362.44 696.23) rotate(-76.05)"></circle>
+</g>
+<circle class="cls-63" cx="241.54" cy="516.52" r="1.42" transform="translate(-382.23 625) rotate(-76.05)">
+</circle>
+<circle class="cls-63" cx="260.02" cy="524.18" r="1.42" transform="translate(-375.63 648.75) rotate(-76.05)">
+</circle>
+<circle class="cls-63" cx="278.49" cy="531.83" r="1.42" transform="translate(-369.04 672.49) rotate(-76.05)">
+</circle>
+<circle class="cls-63" cx="352.4" cy="562.45" r="1.42" transform="translate(-342.66 767.45) rotate(-76.05)">
+</circle>
+<circle class="cls-63" cx="333.93" cy="554.79" r="1.42" transform="translate(-349.25 743.71) rotate(-76.05)">
+</circle>
+<circle class="cls-63" cx="315.45" cy="547.14" r="1.42" transform="translate(-355.85 719.97) rotate(-76.05)">
+</circle>
+</g>
+
+<g>
+<line class="cls-63" x1="124.22" y1="475.12" x2="59.91" y2="319.85"></line>
+<g>
+<circle class="cls-63" cx="156.31" cy="398.88" r="2.83" transform="translate(-247.58 136.37) rotate(-31.05)"></circle>
+</g>
+<circle class="cls-63" cx="179.27" cy="454.32" r="1.42" transform="translate(-272.88 156.15) rotate(-31.05)">
+</circle>
+<circle class="cls-63" cx="171.61" cy="435.84" r="1.42" transform="translate(-264.44 149.56) rotate(-31.05)">
+</circle>
+<circle class="cls-63" cx="163.96" cy="417.36" r="1.42" transform="translate(-256.01 142.96) rotate(-31.05)">
+</circle>
+<circle class="cls-63" cx="133.35" cy="343.45" r="1.42" transform="translate(-222.27 116.58) rotate(-31.05)">
+</circle>
+<circle class="cls-63" cx="141" cy="361.93" r="1.42" transform="translate(-230.71 123.18) rotate(-31.05)">
+</circle>
+<circle class="cls-63" cx="148.65" cy="380.41" r="1.42" transform="translate(-239.14 129.77) rotate(-31.05)">
+</circle>
+</g>
+
+<g>
+<line class="cls-63" x1="123.82" y1="118.09" x2="59.51" y2="273.36"></line>
+<g>
+<circle class="cls-63" cx="155.9" cy="197.12" r="2.83" transform="translate(-137.24 299.51) rotate(-76.05)">
+</circle>
+</g>
+
+<circle class="cls-63" cx="178.87" cy="141.69" r="1.42" transform="translate(-66.01 279.72) rotate(-76.05)">
+</circle>
+<circle class="cls-63" cx="171.21" cy="160.17" r="1.42" transform="translate(-89.75 286.32) rotate(-76.05)">
+</circle>
+<circle class="cls-63" cx="163.56" cy="178.65" r="1.42" transform="translate(-113.49 292.91) rotate(-76.05)">
+</circle>
+<circle class="cls-63" cx="132.94" cy="252.56" r="1.42" transform="translate(-208.46 319.29) rotate(-76.05)">
+</circle>
+<circle class="cls-63" cx="140.6" cy="234.08" r="1.42" transform="translate(-184.72 312.69) rotate(-76.05)">
+</circle>
+<circle class="cls-63" cx="148.25" cy="215.6" r="1.42" transform="translate(-160.98 306.1) rotate(-76.05)">
+</circle>
+</g>
+
+<g>
+<line class="cls-63" x1="310.03" y1="22.91" x2="154.77" y2="87.22"></line>
+<g>
+<circle class="cls-63" cx="296.64" cy="56.46" r="2.83" transform="translate(-50.86 159.69) rotate(-31.05)">
+</circle>
+</g>
+<circle class="cls-63" cx="352.08" cy="33.5" r="1.42" transform="translate(-31.08 184.99) rotate(-31.05)">
+</circle>
+<circle class="cls-63" cx="333.6" cy="41.16" r="1.42" transform="translate(-37.67 176.56) rotate(-31.05)">
+</circle>
+<circle class="cls-63" cx="315.12" cy="48.81" r="1.42" transform="translate(-44.27 168.12) rotate(-31.05)">
+</circle>
+<circle class="cls-63" cx="241.21" cy="79.42" r="1.42" transform="translate(-70.65 134.39) rotate(-31.05)">
+</circle>
+<circle class="cls-63" cx="259.69" cy="71.77" r="1.42" transform="translate(-64.05 142.82) rotate(-31.05)">
+</circle>
+<circle class="cls-63" cx="278.17" cy="64.12" r="1.42" transform="translate(-57.46 151.25) rotate(-31.05)">
+</circle>
+</g>
+
+<g>
+<line class="cls-63" x1="512.31" y1="505.69" x2="357.04" y2="570.01"></line>
+<g>
+<circle class="cls-63" cx="498.92" cy="539.25" r="2.83" transform="translate(-179.54 134.8) rotate(-13.95)">
+</circle>
+</g>
+<circle class="cls-63" cx="554.35" cy="516.29" r="1.42" transform="translate(-172.37 147.49) rotate(-13.95)">
+</circle>
+<circle class="cls-63" cx="535.87" cy="523.94" r="1.42" transform="translate(-174.76 143.26) rotate(-13.95)">
+</circle>
+<circle class="cls-63" cx="517.4" cy="531.59" r="1.42" transform="translate(-177.15 139.03) rotate(-13.95)">
+</circle>
+<circle class="cls-63" cx="443.49" cy="562.21" r="1.42" transform="translate(-186.71 122.12) rotate(-13.95)">
+</circle>
+<circle class="cls-63" cx="461.96" cy="554.55" r="1.42" transform="translate(-184.32 126.34) rotate(-13.95)">
+</circle>
+<circle class="cls-63" cx="480.44" cy="546.9" r="1.42" transform="translate(-181.93 130.57) rotate(-13.95)">
+</circle>
+</g>
+
+<g>
+<line class="cls-63" x1="543.18" y1="474.88" x2="607.5" y2="319.61"></line>
+<g>
+<circle class="cls-63" cx="639.58" cy="398.64" r="2.83" transform="translate(-96.06 739.59) rotate(-58.95)">
+</circle>
+</g>
+<circle class="cls-63" cx="616.62" cy="454.08" r="1.42" transform="translate(-154.67 746.77) rotate(-58.95)">
+</circle>
+<circle class="cls-63" cx="624.28" cy="435.6" r="1.42" transform="translate(-135.13 744.38) rotate(-58.95)">
+</circle>
+<circle class="cls-63" cx="631.93" cy="417.12" r="1.42" transform="translate(-115.6 741.99) rotate(-58.95)">
+</circle>
+<circle class="cls-63" cx="662.54" cy="343.21" r="1.42" transform="translate(-37.45 732.42) rotate(-58.95)">
+</circle>
+<circle class="cls-63" cx="654.89" cy="361.69" r="1.42" transform="translate(-56.99 734.81) rotate(-58.95)">
+</circle>
+<circle class="cls-63" cx="647.24" cy="380.17" r="1.42" transform="translate(-76.53 737.2) rotate(-58.95)">
+</circle>
+</g>
+
+<g>
+<line class="cls-63" x1="543.59" y1="117.86" x2="607.9" y2="273.12"></line>
+<g>
+<circle class="cls-63" cx="639.99" cy="196.89" r="2.83" transform="translate(-92.83 158.71) rotate(-13.95)">
+</circle>
+</g>
+<circle class="cls-63" cx="617.02" cy="141.45" r="1.42" transform="translate(-80.14 151.54) rotate(-13.95)">
+</circle>
+<circle class="cls-63" cx="624.68" cy="159.93" r="1.42" transform="translate(-84.37 153.93) rotate(-13.95)">
+</circle>
+<circle class="cls-63" cx="632.33" cy="178.41" r="1.42" transform="translate(-88.6 156.32) rotate(-13.95)">
+</circle>
+<circle class="cls-63" cx="662.95" cy="252.32" r="1.42" transform="translate(-105.52 165.89) rotate(-13.95)">
+</circle>
+<circle class="cls-63" cx="655.29" cy="233.84" r="1.42" transform="translate(-101.29 163.5) rotate(-13.95)">
+</circle>
+<circle class="cls-63" cx="647.64" cy="215.36" r="1.42" transform="translate(-97.06 161.11) rotate(-13.95)">
+</circle>
+</g>
+
+<g>
+<line class="cls-63" x1="357.37" y1="22.67" x2="512.64" y2="86.99"></line>
+<g>
+<circle class="cls-63" cx="499.25" cy="56.23" r="2.83" transform="translate(129.34 453.55) rotate(-58.95)">
+</circle>
+</g>
+<circle class="cls-63" cx="443.81" cy="33.26" r="1.42" transform="translate(122.17 394.94) rotate(-58.95)">
+</circle>
+<circle class="cls-63" cx="462.29" cy="40.92" r="1.42" transform="translate(124.56 414.48) rotate(-58.95)">
+</circle>
+<circle class="cls-63" cx="480.77" cy="48.57" r="1.42" transform="translate(126.95 434.01) rotate(-58.95)">
+</circle>
+<circle class="cls-63" cx="554.68" cy="79.19" r="1.42" transform="translate(136.52 512.16) rotate(-58.95)">
+</circle>
+<circle class="cls-63" cx="536.2" cy="71.53" r="1.42" transform="translate(134.13 492.62) rotate(-58.95)">
+</circle>
+<circle class="cls-63" cx="517.72" cy="63.88" r="1.42" transform="translate(131.73 473.09) rotate(-58.95)">
+</circle>
+</g>
+</g>
+</g>
+</svg>
+
+
+
+<div>
+
+<table class="table health-map-table" style=" color: white; margin-top: 50px"> 
+<caption class="hh4 yete2" style="font-size: 150%">Mappa della salute</caption>
+<thead>
+<tr style="background: white">
+<th class="yete2 hh3">Fisica</th>
+<th class="yete2 hh3">Energia</th>
+<th class="yete2 hh3">Emozioni</th>
+<th class="yete2 hh3">Nome dei chakra</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: #5d3a8a">
+<td id="purp-1"></td>
+<td id="purp-2"></td>
+<td id="purp-3"></td>
+<td class="td_chakra yete2 hh4">7. Sahasrara</td>
+</tr>
+<tr style="background: #526dfc">
+<td id="blue-1"></td>
+<td id="blue-2"></td>
+<td id="blue-3"></td>
+<td class="td_chakra yete2 hh4">6. Ajna</td>
+</tr>
+<tr style="background: #74a3ab">
+<td id="cyan-1"></td>
+<td id="cyan-2"></td>
+<td id="cyan-3"></td>
+<td class="td_chakra yete2 hh4">5. Vishuddha</td>
+</tr>
+<tr style="background: #4c8656">
+<td id="green-1"></td>
+<td id="green-2"></td>
+<td id="green-3"></td>
+<td class="td_chakra yete2 hh4">4. Anahata</td>
+</tr>
+<tr style="background: #ffcc00">
+<td id="yellow-1"></td>
+<td id="yellow-2"></td>
+<td id="yellow-3"></td>
+<td class="td_chakra yete2 hh4">3. Manipura</td>
+</tr>
+<tr style="background: #ff8318">
+<td id="orange-1"></td>
+<td id="orange-2"></td>
+<td id="orange-3"></td>
+<td class="td_chakra yete2 hh4">2. Swadhisthana</td>
+</tr>
+<tr style="background: #d14a44">
+<td id="red-1"></td>
+<td id="red-2"></td>
+<td id="red-3"></td>
+<td class="td_chakra yete2 hh4">1. Muladhara</td>
+</tr>
+<tr style="background: #9da9ab">
+<td id="total-1"></td>
+<td id="total-2"></td>
+<td id="total-3"></td>
+<td class="td_chakra yete2 hh4">TOTALE</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="row">
+
+
+<table id="mission" style="color: white; font-weight: bold; float: left; margin-bottom: 50px font-weight: bold;">
+<tbody>
+<tr valign="top">
+<td colspan="4"><h3 class="yete2 hh3">Scopo personale:</h3></td>
+<td width="10%"></td>
+<td colspan="4"><h3 class="yete2 hh3">Scopo sociale:</h3></td>
+</tr>
+<tr style="height:5px"><td></td></tr>
+<tr><td colspan="4" class="yete2">
+Unione del maschile e femminile.<br>Abilità, capacità, conoscenze.</td>
+<td width="6%"></td>
+<td colspan="4" class="yete2">Sistemi sociali e del clan familiare.<br>Risultati e riconoscimento nella società.</td>
+</tr>
+<tr style="height:5px">
+<td></td>
+</tr>
+<tr style="font-size:125%;position:relative">
+<td class="yete2">Cielo: </td>
+<td><span id="sky1">16</span></td>
+<td class="yete2" rowspan="2" style="font-size: 500%;font-weight: lighter;">}</td>
+<td rowspan="2">
+<span id="for_self1">7</span>
+</td>
+<td></td>
+<td class="yete2">M: </td>
+<td>
+<span id="male1">7</span>
+</td>
+<td class="yete2" rowspan="2" style="font-size: 500%;font-weight: lighter;">}</td>
+<td rowspan="2">
+<span id="socium1">14</span>
+</td>
+</tr>
+<tr style="font-size:125%">
+<td class="yete2">Terra: </td>
+<td><span id="terra1">9</span></td>
+<td></td>
+<td class="yete2">F: </td>
+<td><span id="female1">7</span></td>
+</tr>
+<tr>
+<td style="height:35px"></td>
+</tr>
+<tr>
+<td colspan="4">
+<h3 class="yete2 hh3">Scopo spirituale:</h3>
+</td>
+<td class="yete2"></td>
+<td colspan="4">
+<h3 class="yete2 hh3">Planetario:</h3>
+</td>
+</tr>
+<tr style="height:5px">
+<td></td>
+</tr>
+<tr>
+<td colspan="4" class="yete2">Chi sono io per Dio? Dov'è il divino in me?</td>
 <td></td>
 <td colspan="4" class="yete2">Scopo planetario, cosa dare al mondo,<br>stile di vita.</td>
 </tr>
@@ -22,43 +1574,275 @@
 <div>
 <table id="table3" style="font-size: 110%; font-weight: 700;color: #0A393F; margin-top: 100px">
 <tr>
-<td><b class="yete2">Data di nascita:</b> <i style="font-size: 500%;font-weight: lighter id="date"></i></td>
     <td><b class="yete2">Data di nascita:</b></td> 
     <td><i style="font-size: 500%;font-weight: lighter id="date"></i>
 </tr>
 <tr>
-<td><b class="yete2">Età:</b> <i id="age"></i></td>
     <td><b class="yete2">Età:</b></td> 
 	<td><i id="age"></i></td>
 </tr>
 <tr>
-<td><b class="yete2">Giorno della settimana:</b> <i id="weekday"></i></td>
     <td><b class="yete2">Giorno della settimana:</b></td> 
 	<td><i id="weekday"></i></td>
 </tr>
 <tr>
-<td><b class="yete2">Codice clan familiare maschile:</b> <i id="m3"></i></td>
     <td><b class="yete2">Codice clan familiare maschile:</b> </td>
 	<td>	<i id="m3"></i></td>
 </tr>
 <tr>
-<td><b class="yete2">Codice clan familiare femminile:</b> <i id="w3"></i></td>
     <td><b class="yete2">Codice clan familiare femminile:</b> </td>
 	<td>	<i id="w3"></i></td>
 </tr>
 <tr>
-<td><b class="yete2">Forza della famiglia:</b> <i id="power_root"></i></td>
     <td><b class="yete2">Forza della famiglia:</b></td> 
 	<td>	<i id="power_root"></i></td>
 </tr>
 <tr>
-<td><b class="yete2">Codice della forza interiore:</b> <i id="power_inner"></i></td>
     <td><b class="yete2">Codice della forza interiore:</b> </td>
 	<td><i id="power_inner"></i></td>
 </tr>
 </table>  
 </div>
-@@ -1837,5 +1844,6 @@
+</div>
+<div class="row">
+    <div style="text-align: center; margin-bottom: 20px;">
+      <a href="https://taplink.cc/Tetiana Matry/p/d35b13/" target="_blank">
+        <button class="inte small" style="padding: 10px 30px; width: auto; display: inline-block; border-radius: 5px;">Sapere di più</button>
+      </a>
+    </div>
+  
+    <h4 class="hh4" style="font-size: 16pt; margin-bottom: 36px">ZONA DI COMFORT - FILOSOFIA DI VITA</h4>
+	<!-- background: url('https://drive.google.com/uc?export=view&id=1leljrBM-rnjRS0yLRyQv3kjm9hOtzFbp') -->
+    <div id="zonainfo" class="sha" style="margin-left: auto; margin-right: auto; color: white; font-size: 14pt; border: 2px solid #444; padding: 25px;  text-align: center; position:relative; max-width: 600px;">
+      <div style="width: 100%; height: 100%; background: #0A393F; position: absolute; top: 0px; left: 0px; opacity: 0.9"></div>
+      <b><p id="zona1" class="pp" style="position:relative"></p></b>
+      <p id="zona2" class="pp" style="position:relative"></p>
+      <p id="zona3" class="pp" style="position:relative"></p>
+      <p id="zona4" class="pp" style="position:relative"></p>
+    </div>
+  </div>                
+</div> </div></div></div></div><!--/allrecords--><!-- Stat --><script type="text/javascript">if (! window.mainTracker) { window.mainTracker = 'tilda'; }
+setTimeout(function(){ (function (d, w, k, o, g) { var n=d.getElementsByTagName(o)[0],s=d.createElement(o),f=function(){n.parentNode.insertBefore(s,n);}; s.type = "text/javascript"; s.async = true; s.key = k; s.id = "tildastatscript"; s.src=g; if (w.opera=="[object Opera]") {d.addEventListener("DOMContentLoaded", f, false);} else { f(); } })(document, window, 'e68424c6abc9ee5981f29fc3394ac717','script','https://static.tildacdn.com/js/tilda-stat-1.0.min.js');
+}, 2000); 
+</script>
+</div>
+	<!-- скрипт для перемикання мов -->
+<script>
+  const langButtons = document.querySelectorAll('.language-switcher button');
+  const langTexts = document.querySelectorAll('.lang-text');
+
+  langButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-lang');
+      langTexts.forEach(text => {
+        text.style.display = text.getAttribute('data-lang') === lang ? 'block' : 'none';
+      });
+    });
+  });
+</script>
+		 
+
+	<!-- скрипт для перемикання мов -->
+<script>
+  const langButtons = document.querySelectorAll('.language-switcher button');
+  const langTexts = document.querySelectorAll('.lang-text');
+
+  langButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-lang');
+      langTexts.forEach(text => {
+        text.style.display = text.getAttribute('data-lang') === lang ? 'block' : 'none';
+      });
+    });
+  });
+</script>
+
+		 <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const svgs = document.querySelectorAll("svg");
+
+  svgs.forEach(svg => {
+    // Переміщуємо кола наверх (поверх ліній)
+    const circles = svg.querySelectorAll("circle");
+    circles.forEach(circle => {
+      svg.appendChild(circle);
+    });
+
+    // Переміщуємо тексти наверх (щоб цифри не зникали)
+    const texts = svg.querySelectorAll("text");
+    texts.forEach(text => {
+      svg.appendChild(text);
+    });
+  });
+});
+</script>
+	
+</body>
+
+	 <!-- Перемикач мов -->
+<div class="language-switcher">
+  <button class="lang-btn" data-lang="uk">УКР</button>
+  <button class="lang-btn" data-lang="en">EN</button>
+  <button class="lang-btn" data-lang="it">IT</button>
+</div>
+
+ </html>
+
+<link rel="stylesheet" href="fix.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
