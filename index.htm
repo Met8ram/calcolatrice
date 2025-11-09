@@ -548,10 +548,10 @@ td.td_chakra{
 {
 	stroke:#000
 }
-/*.cls-55 }fill:#FFF { */
-	/* Фікс для cls-55 */
+
 .cls-55 {
   color: #222 !important; /* текст у HTML */
+  fill: #ffffff
 }
 text.cls-55, tspan.cls-55 {
   fill: #222 !important; /* текст у SVG */
@@ -592,13 +592,14 @@ text.cls-55, tspan.cls-55 {
 }
 .cls-27
 {
-	stroke:#5d3a8a
+	stroke:#5d3a8a;
 }
 .cls-13
 {
-	fill:#343e6f
+	fill:#526dfc;
 }
-.cls-15{
+.cls-15 
+{
 	fill:#74a3ab;
 }
 .cls-17,.cls-18,.cls-27,.cls-31,.cls-32,.cls-37
@@ -649,12 +650,11 @@ text.cls-55, tspan.cls-55 {
 }
 .cls-28,.cls-30,.cls-67,.cls-34,.cls-35,.cls-36,.cls-39,.cls-43,.cls-51,.cls-66,.cls-54,.cls-55,.cls-56,.cls-57,.cls-58,.cls-59,.cls-60
 {
-
 	font-weight:700;
 	text-shadow: black 0 0 5px;
 	color: white;
 }
-	.cls-21,.cls-55,.cls-58,.cls-60 /* Це не прибере перекриття, але може допомогти, якщо SVG інтерактивний */
+.cls-21,.cls-55,.cls-58,.cls-60 /* Це не прибере перекриття, але може допомогти, якщо SVG інтерактивний */
 {
 	
 	/*fill: white !important;  саме fill, не color */
@@ -1442,7 +1442,7 @@ margin-block-end: 1em;
 <td id="purp-3"></td>
 <td class="td_chakra yete">7. Sahasrara</td>
 </tr>
-<tr style="background: #343e6f">
+<tr style="background: #526dfc">
 <td id="blue-1"></td>
 <td id="blue-2"></td>
 <td id="blue-3"></td>
@@ -1681,6 +1681,7 @@ document.addEventListener("DOMContentLoaded", () => {
  </html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
