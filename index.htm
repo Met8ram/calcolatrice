@@ -798,12 +798,20 @@ text.cls-55, tspan.cls-55 {
 	text-align:center;
 	line-height:30px
 }
-body
+
+html, body {
+    height: 100%;
+    overflow-y: hidden; /* прибирає скрол з усієї сторінки */
+    margin: 0;
+    padding: 0;
+}
+	
+ /*	body
 {	
     margin: 0px;
 	background-color:#fff;
     overflow-x: hidden; /* прибирає горизонтальний скрол */
-}
+}*/
 
 }
 #row
@@ -1868,6 +1876,7 @@ function setLang(lang) {
  </html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
