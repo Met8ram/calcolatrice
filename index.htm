@@ -989,7 +989,7 @@ margin-block-end: 1em;
 	
 </style>
 
-<div id="INTRO" style="display: block; 
+<!--  <div id="INTRO" style="display: block; 
 	width: 100%; height: 100vh; position: absolute; top: 0; border: 1px solid rgba(0, 0, 0, 0); background-size: cover; background-position: center;">
 
 <h2 class="yete2 hh2" font-size: 28pt; margin-top: 260px;">Calcolatrice</h2>
@@ -1000,7 +1000,51 @@ margin-block-end: 1em;
 <h2 class="hh2" style="position: relative; margin-top: 5px">
     <input id="birthday" class="inte big" onkeydown="return KD(event.key, this.id)" onkeyup="Dots(this.id)" placeholder="gg.mm.aaaa" title="Data" type="text" inputmode="tel">
     <input type="button" class="inte big" value="Calcolare" onclick="Calc()" ontouchend="Calc()">
-</h2>
+</h2> -->
+
+<div id="INTRO" style="display: block; width: 100%; height: 100vh; position: absolute; top: 0; border: 1px solid rgba(0, 0, 0, 0); background-size: cover; background-position: center;">
+
+  <h2 class="yete2 hh2" data-it="Calcolatrice" data-ua="Калькулятор" data-en="Calculator">
+    Calcolatrice
+  </h2>
+
+  <h2 class="yete2 hh2" style="font-weight:bolder; font-size: 45pt; margin-bottom: 20px"
+      data-it="MATRICE DELL DESTINO"
+      data-ua="МАТРИЦЯ ДОЛІ"
+      data-en="MATRIX OF DESTINY">
+    MATRICE DELL DESTINO
+  </h2>
+
+  <h2 class="yete2 hh2" style="font-weight:bolder; font-size: 18pt; margin-top: 40px; margin-bottom: 1px"
+      data-it="Inserire i dati:"
+      data-ua="Введіть дані:"
+      data-en="Enter your data:">
+    Inserire i dati:
+  </h2>
+
+  <h2 class="hh2" style="position: relative; margin-top: 5px">
+    <input id="birthday" class="inte big"
+           onkeydown="return KD(event.key, this.id)"
+           onkeyup="Dots(this.id)"
+           placeholder="gg.mm.aaaa"
+           data-it-placeholder="gg.mm.aaaa"
+           data-ua-placeholder="дд.мм.рррр"
+           data-en-placeholder="dd.mm.yyyy"
+           title="Data" type="text" inputmode="tel">
+    <input type="button" class="inte big"
+           value="Calcolare"
+           data-it-value="Calcolare"
+           data-ua-value="Розрахувати"
+           data-en-value="Calculate"
+           onclick="Calc()" ontouchend="Calc()">
+  </h2>
+
+  <h2 class="yete2 sha hh2" id="elabel"
+      style="font-weight:bolder; color: crimson; font-size: 18pt; margin-top: 12px; margin-bottom: 70px; visibility: hidden"
+      data-it="!!!" data-ua="!!!" data-en="!!!">
+    !!!
+  </h2>
+
 
 <h2 class="yete2 sha hh2" id="elabel" style="font-weight:bolder; color: crimson; font-size: 18pt; margin-top: 12px; margin-bottom: 70px; visibility: hidden">!!!</h2>
 
@@ -1795,6 +1839,7 @@ document.addEventListener("DOMContentLoaded", () => {
  </html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
