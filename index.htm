@@ -54,10 +54,16 @@
     </style> 
 				 <!-- Перемикач мов -->
 
-		<div id="lang-switch">
-    <button onclick="setLang('it')">IT</button>
-    <button onclick="setLang('ua')">UA</button>
-    <button onclick="setLang('en')">EN</button>
+		<div id="header">
+    <div id="logo">
+        <!-- Тут буде твоє лого -->
+        <img src="logo.png" alt="Logo" style="height:50px;">
+    </div>
+    <div id="lang-switch">
+        <button onclick="setLang('it')">IT</button>
+        <button onclick="setLang('ua')">UA</button>
+        <button onclick="setLang('en')">EN</button>
+    </div>
 </div>
 
 
@@ -937,12 +943,24 @@ margin-block-end: 1em;
     color: #0A393F; /* темно-зелений, як у заголовків */
 }
 
-#lang-switch {
-    display: flex;           /* розташування кнопок в ряд */
-    justify-content: center; /* центруємо по горизонталі */
-    gap: 8px;                /* відстань між кнопками */
-    margin: 10px 0;
+#header {
+    display: flex;
+    justify-content: space-between; /* лого зліва, кнопки справа */
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 100%;
+    box-sizing: border-box;
 }
+
+#logo img {
+    height: 50px; /* можна підлаштувати під дизайн */
+}
+
+#lang-switch {
+    display: flex;
+    gap: 8px;
+}
+
 #lang-switch button {
     background: #0A393F;
     color: white;
@@ -953,10 +971,12 @@ margin-block-end: 1em;
     cursor: pointer;
     transition: transform 0.2s, background 0.2s;
 }
+
 #lang-switch button:hover {
     transform: scale(1.05);
     background: #07434a;
 }
+
 
 
 
@@ -1775,6 +1795,7 @@ document.addEventListener("DOMContentLoaded", () => {
  </html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
