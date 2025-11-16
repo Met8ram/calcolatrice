@@ -53,11 +53,24 @@
 
     </style> 
 				 <!-- Перемикач мов -->
-<div class="language-switcher">
+
+		<div id="lang-switch" style="
+    position: relative;      /* не ламає інші елементи */
+    display: inline-block;   /* не займає всю ширину */
+    margin: 10px 0;           /* невеликий відступ зверху/знизу */
+    padding: 0;
+">
+    <button onclick="setLang('it')" style="margin:0 5px;">IT</button>
+    <button onclick="setLang('ua')" style="margin:0 5px;">UA</button>
+    <button onclick="setLang('en')" style="margin:0 5px;">EN</button>
+</div>
+
+ <!-- <div class="language-switcher">
   <button class="lang-btn" data-lang="en">EN</button>
   <button class="lang-btn" data-lang="uk">UA</button>
   <button class="lang-btn" data-lang="it">IT</button>
-</div>
+</div> 
+		-->
 		
 		<link rel="stylesheet" href="css/fix.css"> 
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -925,6 +938,21 @@ margin-block-end: 1em;
     color: #0A393F; /* темно-зелений, як у заголовків */
 }
 
+#lang-switch button {
+    background: #0A393F;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+#lang-switch button:hover {
+    transform: scale(1.05);
+    background: #07434a;
+}
 
 
 
@@ -967,7 +995,7 @@ margin-block-end: 1em;
   </defs>
   <path fill="url(#IG)" d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H7c-1.65 0-3-1.35-3-3V7c0-1.65 1.35-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.75-.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"/>
 </svg>
-    <span class="icon-text">TETIANA MATRY</span>
+    <span class="icon-text">Tetiana Matry</span>
   </a>
 </div>
 
@@ -1743,6 +1771,7 @@ document.addEventListener("DOMContentLoaded", () => {
  </html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
