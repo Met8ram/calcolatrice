@@ -900,17 +900,17 @@ margin-block-end: 1em;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    color: #fff; /* світлий текст */
-    background-color: #0A393F; /* темний фон */
-    padding: 10px;
-    border-radius: 12px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    color: #000; /* чорний текст під іконкою */
+    padding: 5px;
+    border-radius: 8px;
     transition: transform 0.3s;
+    background: none; /* прибрано темний фон */
+    box-shadow: none; /* прибрано тіні */
+}
+.icon:hover {
+    transform: scale(1.05);
 }
 
-.icon:hover {
-    transform: scale(1.1);
-}
 
 
 .icon svg {
@@ -919,11 +919,12 @@ margin-block-end: 1em;
 
 
 .icon-text {
+    margin-top: 5px;
     font-size: 14px;
-    font-weight: 500;
-    text-align: center;
-    color: #fff; /* світлий текст */
+    font-weight: 600;
+    color: #0A393F; /* темно-зелений, як у заголовків */
 }
+
 
 	
 </style>
@@ -1726,6 +1727,7 @@ document.addEventListener("DOMContentLoaded", () => {
  </html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
