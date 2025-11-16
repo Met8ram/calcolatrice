@@ -1831,6 +1831,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+<script>
+function setLang(lang) {
+    // Зміна текстів
+    document.querySelectorAll('[data-it], [data-ua], [data-en]').forEach(el => {
+        if (el.tagName === 'INPUT' || el.tagName === 'BUTTON') {
+            // Змінюємо value для кнопок та input[type="button"]
+            if (el.dataset[lang]) el.value = el.dataset[lang + '-value'] || el.dataset[lang];
+            // Змінюємо placeholder для input
+            if (el.placeholder !== undefined && el.dataset[lang + '-placeholder']) {
+                el.placeholder = el.dataset[lang + '-placeholder'];
+            }
+        } else {
+            // Змінюємо внутрішній текст для всіх інших елементів
+            if (el.dataset[lang]) el.textContent = el.dataset[lang];
+        }
+    });
+}
+</script>
+
+
+			 
 </script>
 
 
@@ -1839,6 +1861,7 @@ document.addEventListener("DOMContentLoaded", () => {
  </html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
