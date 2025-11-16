@@ -4,11 +4,13 @@
 		<link rel="stylesheet" href="css/style.css"> 
 		<meta charset="utf-8"><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--metatextblock-->
-		<title>Calcolatrice - Tetiana Matry</title><meta name="description" content="CALCOLO DELLA MATRICE DEL DESTINO - TETIANA MATRY"> 
+		<title>Calcolatrice - Tetiana Matry</title>
+		<meta name="description" content="CALCOLO DELLA MATRICE DEL DESTINO - TETIANA MATRY"> 
 		<meta property="og:url" content="http://matricedeldestino.tilda.ws/calcolo">
 		<meta property="og:title" content="CALCOLO DELLA MATRICE DEL DESTINO - Tetiana Matry">
 		<meta property="og:description" content="CALCOLO DELLA MATRICE DEL DESTINO - Tetiana Matry">
-		<meta property="og:type" content="website"><link rel="canonical" href="http://matricedeldestino.tilda.ws/calcolo"><!--/metatextblock-->
+		<meta property="og:type" content="website">
+		<link rel="canonical" href="http://matricedeldestino.tilda.ws/calcolo"><!--/metatextblock-->
 		<meta name="format-detection" content="telephone=no">
 		<meta http-equiv="x-dns-prefetch-control" content="on">
 		<link rel="dns-prefetch" href="https://ws.tildacdn.com">
@@ -47,6 +49,24 @@
 			.line, line { stroke: #444 !important; 
 						} /* Примусово перефарбовує всі .cls-3 прямокутники */ 
 			.cls-3 { stroke: #444 !important; fill: none } 
+.intro-instagram {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.intro-instagram img {
+    width: 48px;
+    height: 48px;
+    filter: brightness(0); /* чорна іконка */
+    transition: 0.3s;
+}
+
+.intro-instagram img:hover {
+    filter: brightness(0.4);
+}
+
 		</style> 
 		<link rel="stylesheet" href="css/fix.css"> 
 	</head> 
@@ -909,7 +929,12 @@ margin-block-end: 1em;
 <input type="button" class="inte big" value="Calcolare" onclick="Calc()" ontouchend="Calc()">
 </h2>
 <h2 class="yete2 sha hh2" id="elabel" style="font-weight:bolder; color: crimson; font-size: 18pt; margin-top: 12px; margin-bottom: 70px; visibility: hidden">!!!</h2>
-
+	
+ <div class="intro-instagram">
+        <a href="https://instagram.com/https://www.instagram.com/tetiana_matry/" target="_blank">
+            <img src="https://static.tildacdn.com/tild3433-3931-4533-a265-656339393966/instagram_white.svg" alt="Instagram">
+        </a>
+    </div>
 </div>
 
 <div id="SCREEN" style="display: none;">
@@ -1682,6 +1707,7 @@ document.addEventListener("DOMContentLoaded", () => {
  </html>
 
 <link rel="stylesheet" href="fix.css">
+
 
 
 
